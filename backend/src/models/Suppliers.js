@@ -22,7 +22,7 @@ require: true
     phone: {
         type: Number,
         require: true,
-        max: 8,
+        max: 9,
        
     }
     
