@@ -3,7 +3,7 @@ import categoriesController from "../controllers/categoryController.js";
 
 const router = express.Router();
 
-router
+router.route("/")
     .get(categoriesController.getCategories)
     .post(categoriesController.createCategory);
 router
