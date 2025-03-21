@@ -24,6 +24,7 @@ productsController.createProduct = async (req, res) => {
   res.json({ message: "Producto guardado" });
 };
 
+
 // DELETE
 productsController.deleteProduct = async (req, res) => {
   const deletedProduct = await productsModel.findByIdAndDelete(req.params.id);

@@ -1,12 +1,12 @@
 /*
    Products: 
-   nameProduct string
-   Amount init
-   productDescrition string
-   price decimal
-   size string
-   idSupplier objectid
-   idCategory string
+   nameProduct 
+   Amount 
+   productDescrition 
+   price 
+   size 
+   idSupplier 
+   idCategory 
 */
 
 
