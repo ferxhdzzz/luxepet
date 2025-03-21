@@ -3,8 +3,9 @@ import { Schema, model } from "mongoose";
 const branchesSchema = new Schema(
   {
     idCostumer: {
-      type: String,
-      require: true,
+      type: Schema.Types.ObjectId,
+      ref: "cutomers",
+      require: true
     },
 
     Products: {
