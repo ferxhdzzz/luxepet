@@ -23,7 +23,7 @@ const deletedcart = await cartModel.findByIdAndDelete(req.params.id);
 
 cartController.updatecart = async (req, res) => {
   // Solicito todos los valores
-  const { idCostumer,Products,Total,Status,  } = req.body;
+  const { idCostumer,Products,Total,Status} = req.body;
   // Actualizo
   await cartModel.findByIdAndUpdate(
     req.params.id,
