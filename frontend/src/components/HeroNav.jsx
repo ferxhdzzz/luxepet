@@ -7,57 +7,7 @@ import "./HeroNav.css";
 const HeroNav = () => {
   return (
     <>
-      
-      <Navbar bg="light" expand="lg" className="px-4 fixed-top">
-        <Container>
-          
-          <Navbar.Brand as={Link} to="/">
-            <img
-              src="/LogoLuxe.png"
-              alt="LuxePet Logo"
-              width="200 "
-              height="70"
-              className="d-inline-block align-top"
-            />{" "}
-
-          </Navbar.Brand>
-
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/" className="fw-bold">
-                Inicio
-              </Nav.Link>
-              <Nav.Link as={Link} to="/about" className="fw-bold">
-                Sobre Nosotros
-              </Nav.Link>
-              <Nav.Link as={Link} to="/products" className="fw-bold">
-                Productos
-              </Nav.Link>
-              <Nav.Link as={Link} to="/contact" className="fw-bold">
-                Contáctanos
-              </Nav.Link>
-              <Nav.Link as={Link} to="/profile" className="fw-bold">
-                Perfil
-              </Nav.Link>
-
-            
-              <Nav.Link as={Link} to="/cart" className="fw-bold position-relative">
-                <FaShoppingCart size={22} />
-                <Badge
-                  bg="danger"
-                  pill
-                  className="position-absolute top-0 start-100 translate-middle"
-                >
-                  1
-                </Badge>
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
-    
+       
       <section className="hero-section">
         <Container className="hero-container">
           <div className="hero-text">
