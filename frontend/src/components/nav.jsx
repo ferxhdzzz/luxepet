@@ -24,7 +24,7 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/" className="fw-bold">
+            <Nav.Link as={Link} to="/gato" className="fw-bold">
               Inicio
             </Nav.Link>
             <Nav.Link as={Link} to="/about" className="fw-bold">
@@ -36,7 +36,7 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/contact" className="fw-bold">
               Contáctanos
             </Nav.Link>
-            <Nav.Link as={Link} to="/profile" className="fw-bold">
+            <Nav.Link as={Link} to="/configuration" className="fw-bold">
               Perfil
             </Nav.Link>
 
