@@ -12,7 +12,7 @@ const Navigation = () => {
         {/* Logo */}
         <Navbar.Brand as={Link} to="/">
           <img
-            src="/vite.svg" 
+            src="/vite.svg"
             alt="LuxePet Logo"
             width="50"
             height="50"
@@ -38,6 +38,9 @@ const Navigation = () => {
             </Nav.Link>
             <Nav.Link as={Link} to="/configuration" className="fw-bold">
               Perfil
+            </Nav.Link>
+            <Nav.Link as={Link} to="/prueba" className="fw-bold">
+              Prueba
             </Nav.Link>
 
             {/* Carrito de compras */}
