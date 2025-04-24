@@ -188,7 +188,7 @@ body {
     }
 }
 
-/* Modificación para que la información aparezca debajo de la imagen */
+/* para que la información aparezca debajo de la imagen */
 .product-layout.vertical {
     flex-direction: column !important;
 }
@@ -222,7 +222,7 @@ body {
     object-fit: contain;
 }
 
-/* Estilos adicionales para mejorar la apariencia */
+/*Estilos adicionales*/
 .product-layout.vertical .product-info-container {
     padding: 20px;
     border-top: 1px solid #e9e9e9;
