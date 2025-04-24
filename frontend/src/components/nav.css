@@ -57,3 +57,18 @@
     max-width: 100%;
   }
   
+
+  .navbar {
+    height: 100px; /* Ajusta según el diseño */
+    display: flex;
+    align-items: center; /* Centra verticalmente los hijos */
+    padding-left: 1rem; /* Opcional: separa el logo del borde */
+  }
+  
+  /* Estilo para el logo */
+  .nav-logo {
+    height: 100px; /* Tamaño visual del logo */
+    object-fit: contain;
+    display: block;
+  }
+  

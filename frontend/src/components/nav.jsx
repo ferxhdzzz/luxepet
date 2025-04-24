@@ -5,20 +5,20 @@ import { FaShoppingCart } from "react-icons/fa";
 import "./nav.css";
 
 
+
 const Navigation = () => {
   return (
     <Navbar bg="light" expand="lg" className="px-4">
       <Container>
         {/* Logo */}
         <Navbar.Brand as={Link} to="/">
-          <img
-            src="/vite.svg"
-            alt="LuxePet Logo"
-            width="50"
-            height="50"
-            className="d-inline-block align-top"
-          />{" "}
-          <span className="fw-bold">LuxePet</span>
+        <img
+    src="/luxe.svg"
+    alt="LuxePet Logo"
+    className="nav-logo"
+  />{" "}
+          <br />
+          <br />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -33,6 +33,7 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/products" className="fw-bold">
               Productos
             </Nav.Link>
+            
             <Nav.Link as={Link} to="/contact" className="fw-bold">
               Contáctanos
             </Nav.Link>
