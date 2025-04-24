@@ -13,13 +13,14 @@ const Navigation = () => {
         {/* Logo */}
         <Navbar.Brand as={Link} to="/">
           <img
-            src="/vite.svg"
+            src="/luxe.svg"
             alt="LuxePet Logo"
             width="50"
             height="50"
             className="d-inline-block align-top"
           />{" "}
-          <span className="fw-bold">LuxePet</span>
+          <br />
+          <br />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

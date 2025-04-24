@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './Productoss.css'
+
 
 const Tienda = () => {
   const [precio, setPrecio] = useState(50);
@@ -9,6 +11,7 @@ const Tienda = () => {
     { nombre: 'Comida de gato prm', precio: '$19.99', link: '/producto/3', img: 'https://i.pinimg.com/736x/2f/3f/07/2f3f07fd6c7651fc52bb7c2eb3ad0c2a.jpg' },
     { nombre: 'Premios para gatos', precio: '$20.99', link: '/producto/4', img: 'https://i.pinimg.com/736x/45/d9/86/45d986da499519112b4bec2a8610a9ae.jpg' },
     { nombre: 'Arenero para gatos', precio: '$4.99', link: '/producto/5', img: 'https://i.pinimg.com/736x/a7/6c/49/a76c49a2b1a33af8cc203da15748feda.jpg' },
+    
     { nombre: 'Cama para gatos', precio: '$49.99', link: '/producto/6', img: 'https://i.pinimg.com/736x/41/a4/3a/41a43a3b45b999bb2a705b34472b7874.jpg' },
     { nombre: 'Correa para gato/perro', precio: '$9.99', link: '/producto/7', img: 'https://i.pinimg.com/736x/84/48/59/8448595e43a4b99c23d9783a4dc40d1e.jpg' },
     { nombre: 'Cama grande para gato', precio: '$49.99', link: '/producto/8', img: 'https://i.pinimg.com/736x/3d/22/97/3d22976354af20d83421e0e3dc1a71e0.jpg' },
@@ -24,182 +27,7 @@ const Tienda = () => {
 
   return (
     <div className="tienda-container">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-        .tienda-container {
-          display: flex;
-          font-family: 'Poppins', sans-serif;
-          padding: 20px;
-          font-size: 12px;
-          justify-content: space-between; /* Distribuye espacio entre la barra lateral y las cards */
-        }
-
-        .sidebar {
-          width: 250px;
-          padding-right: 20px;
-        }
-
-        .sidebar h4, .main-content h2 {
-          margin-top: 20px;
-          margin-bottom: 10px;
-          text-align: left;
-          font-size: 15px;
-        }
-
-        .checkbox-group {
-          text-align: left;
-        }
-
-        .checkbox-group label {
-          display: block;
-          margin-bottom: 5px;
-        }
-
-        .tag-buttons {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-          justify-content: flex-start;
-        }
-
-        .tag-buttons button {
-          background-color: #ccc;
-          border: none;
-          border-radius: 50px;
-          padding: 5px 10px;
-          cursor: pointer;
-          font-size: 12px;
-        }
-
-        .popular-product {
-          display: flex;
-          align-items: center;
-          margin-bottom: 10px;
-        }
-
-        .popular-product img {
-          width: 40px;
-          height: 40px;
-          margin-right: 10px;
-          background-color: #eee;
-        }
-
-        .popular-product a {
-          color: #333;
-          text-decoration: none;
-          font-size: 12px;
-        }
-
-        .popular-price {
-          font-weight: bold;
-          font-size: 12px;
-          margin: 0;
-          text-align: left;
-        }
-
-        .main-content {
-          flex: 1;
-        }
-
-        .main-content h2 {
-          margin-bottom: 20px;
-        }
-
-        .product-grid-wrapper {
-          display: flex;
-          justify-content: center;
-        }
-
-        .product-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 20px;
-          width: 800px;
-        }
-
-        .card {
-          border: 1px solid #eee;
-          border-radius: 8px;
-          padding: 10px;
-          text-align: left;
-        }
-
-        .card img {
-          width: 100%;
-          height: 240px;
-          object-fit: cover;
-          margin-bottom: 10px;
-        }
-
-        .card a {
-          text-decoration: none;
-          color: #000;
-        }
-
-        .card h4 {
-          font-size: 12px;
-        }
-
-        .card p {
-          font-size: 12px;
-        }
-
-        .card button {
-          background-color: #1C1E52;
-          color: white;
-          padding: 8px 30px;
-          border: none;
-          border-radius: 50px;
-          cursor: pointer;
-          font-size: 12px;
-        }
-
-        .pagination {
-          margin-top: 20px;
-          display: flex;
-          justify-content: center;
-          gap: 10px;
-          align-items: center;
-        }
-
-        .pagination .button-group {
-          display: flex;
-          gap: 10px;
-        }
-
-        .pagination button {
-          border: 1px solid #1C1E52;
-          background: transparent;
-          padding: 5px 10px;
-          cursor: pointer;
-          border-radius: 50px;
-          font-size: 12px;
-          color: #1C1E52;
-        }
-
-        .pagination button:hover {
-          background-color: #1C1E52;
-          color: white;
-        }
-
-        .range-container {
-          margin-top: 10px;
-          margin-bottom: 20px;
-          text-align: left;
-        }
-
-        .range-container input[type=range] {
-          width: 100%;
-        }
-
-        .range-container span {
-          display: block;
-          margin-top: 5px;
-          font-weight: bold;
-        }
-      `}</style>
-
+     
       <div className="sidebar">
         <h4>Filtrar por categorías</h4>
         <div className="checkbox-group">
