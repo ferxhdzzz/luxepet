@@ -12,13 +12,11 @@ const Navigation = () => {
       <Container>
         {/* Logo */}
         <Navbar.Brand as={Link} to="/">
-          <img
-            src="/luxe.svg"
-            alt="LuxePet Logo"
-            width="50"
-            height="50"
-            className="d-inline-block align-top"
-          />{" "}
+        <img
+    src="/luxe.svg"
+    alt="LuxePet Logo"
+    className="nav-logo"
+  />{" "}
           <br />
           <br />
         </Navbar.Brand>
