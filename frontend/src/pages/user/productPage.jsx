@@ -174,19 +174,21 @@ const ProductPage = () => {
             </div>
           </div>
 
+          <br />
+          <br />
+
           {/* Detalles de Producto */}
           <div className="product-detail">
-            <div className="product-layout">
-              <div className="product-image-container">
+            <div className="product-layout vertical">
+              <div className="product-image-container full-width">
                 <img
-                  src="https://via.placeholder.com/400"
+                  src="https://5.imimg.com/data5/ECOM/Default/2024/1/376691210/HC/DP/YV/82542766/huftiputthewagintheswagdogt-shirt-30960d5f-1f24-4548-92e3-2725945be348-500x500.jpg"
                   alt="Camiseta de perro con estampado"
                   className="product-image"
                 />
-                <button className="favorite-button">❤</button>
               </div>
 
-              <div className="product-info-container">
+              <div className="product-info-container full-width">
                 <div className="product-header">
                   <h2 className="product-title">Camiseta de perro con estampado</h2>
                   <div className="product-price-tag">
@@ -214,17 +216,18 @@ const ProductPage = () => {
                 <div className="product-description">
                   <h3 className="description-title">Descripción:</h3>
                   <p className="description-text">
-                    Linda y cómoda camiseta para tu mejor amigo peludo, con material de algodón,
-                    perfecto para los días calurosos.
+                    Linda y cómoda camiseta diseñada especialmente para tu mejor amigo peludo. Confeccionada en un suave material de algodón, esta prenda es ideal para mantener a tu mascota fresca y a gusto durante los días calurosos. Su diseño no solo ofrece confort, sino que también permite que tu mascota se mueva libremente. Además, la camiseta viene en diversas tallas y colores, adaptándose a las necesidades y gustos de cada dueño y su fiel compañero. Es perfecta para paseos, días en el parque o simplemente para que tu peludo luzca a la moda en casa.
                   </p>
                 </div>
 
+
+                <br /> <br /> <br />
                 <div className="add-to-cart-container">
                   <button
                     onClick={handleAddToCart}
                     className="add-to-cart-button"
                   >
-                    🛒 Añadir al carrito
+                    Añadir al carrito
                   </button>
                 </div>
               </div>

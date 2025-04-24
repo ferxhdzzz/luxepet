@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './configuration.css'; // Asegúrate de crear este archivo CSS
+import './configuration.css'; 
 
 const Configuration = () => {
     const [userData, setUserData] = useState({
@@ -28,7 +28,7 @@ const Configuration = () => {
         <>
             <div className="config-container">
                 <div className="config-wrapper">
-                    {/* Left side - User Info */}
+                    {/* Informacion del usurario (izquierda) */}
                     <div className="user-info-panel">
                         <div className="user-avatar-container">
                             <div className="user-avatar">
@@ -63,7 +63,7 @@ const Configuration = () => {
                         </div>
                     </div>
 
-                    {/* Right side - Form */}
+                    {/* FORM*/}
                     <div className="form-panel">
                         <h2 className="panel-title">Detalles</h2>
 
@@ -81,7 +81,7 @@ const Configuration = () => {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label className="form-label">Last Name</label>
+                                    <label className="form-label">Apellido</label>
                                     <input
                                         type="text"
                                         name="apellido"
@@ -122,7 +122,7 @@ const Configuration = () => {
                                 Guardar
                             </button>
 
-                            <h3 className="section-title password-title">Contraseña</h3>
+                            <h3 className="password-title">Contraseña</h3>
                             <p className="password-subtitle">Cambiar la contraseña</p>
 
                             <div className="form-row">
@@ -159,14 +159,15 @@ const Configuration = () => {
                                         <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
-
-                                <button type="button" className="btn-primary photo-btn">
-                                    Tomar foto
-                                </button>
-
-                                <button type="button" className="btn-primary">
-                                    Subir imagen
-                                </button>
+                                
+                                <div className="photo-buttons">
+                                    <button type="button" className="btn-primary photo-btn">
+                                        Tomar foto
+                                    </button>
+                                    <button type="button" className="btn-primary">
+                                        Subir imagen
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>

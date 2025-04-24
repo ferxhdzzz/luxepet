@@ -273,13 +273,14 @@
     justify-content: space-between;
     width: 100%;
     padding: 12px 20px;
-    background-color: #3498db;
+    background-color: #419CD3;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
+
 }
 
 .confirm-button:hover {
