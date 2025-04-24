@@ -5,6 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import "./nav.css";
 
 
+
 const Navigation = () => {
   return (
     <Navbar bg="light" expand="lg" className="px-4">
@@ -33,6 +34,7 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/products" className="fw-bold">
               Productos
             </Nav.Link>
+            
             <Nav.Link as={Link} to="/contact" className="fw-bold">
               Contáctanos
             </Nav.Link>
