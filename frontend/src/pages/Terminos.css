@@ -1,0 +1,33 @@
+.terminos {
+   display: flex;
+    height: 140vh;
+    background: linear-gradient(to  bottom left, #EEEEEE 30%, #59A8D6 100%);
+    font-family: 'Poppins', Arial, sans-serif;
+  }
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .description {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 30px;
+    max-width: 1000000000000px; /* <-- AUMENTAMOS EL ANCHO */
+}
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #033a2b;
+    margin-bottom: 20px;
+  }    
+
+  .left-section {
+    flex: 0.8;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* <-- Esto sube el contenido */
+    align-items: flex-start;
+    padding-top: -30px; /* Ajusta este valor según cuánto lo quieras subir */
+  }
+  /* Sección derecha */

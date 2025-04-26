@@ -14,6 +14,9 @@ import Carrito from './pages/user/CartPagee'
 import Configuration from './pages/user/configuration'
 import ProductPage from './pages/user/productPage'
 import Contactanos from './pages/Contactanos'
+import Terminos from './pages/Terminos'
+import Enviarcod from './pages/Enviarcodigo'
+import Actualizar from './pages/Actualizarcontra'
 
 
 
@@ -40,6 +43,9 @@ function App() {
           <Route path="/configuration" element={<Configuration />} />
           <Route path="/products" element={<Productsycat />} />
           <Route path="/contact" element={<Contactanos />} />
+          <Route path="/Terminos" element={<Terminos />} />
+          <Route path="/enviar" element={<Enviarcod />} />
+          <Route path="/actualizar" element={<Actualizar />} />
           <Route path="/cart" element={<Carrito />} />
           
           {/* Nuevas rutas dinámicas para productos */}
