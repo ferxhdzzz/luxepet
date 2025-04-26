@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Categoria.css';
 
 const CategoriaCard = ({ imagen, titulo, productos }) => {
@@ -6,7 +7,6 @@ const CategoriaCard = ({ imagen, titulo, productos }) => {
 
   return (
     <div
-    
       className={`card ${hovered ? 'card-hover' : ''}`}
       style={{ width: '150px' }}
       onMouseEnter={() => setHovered(true)}
@@ -41,7 +41,8 @@ const ProductoCard = ({ imagen, titulo, precio, link }) => {
       <img src={imagen} alt={titulo} className="card-image" />
       <h4 className="text-sm">{titulo}</h4>
       <p className="precio">{precio}</p>
-      <a href={link} className="no-decoration">
+      {/* Reemplazo del tag <a> por <Link> de React Router */}
+      <Link to={link} className="no-decoration">
         <button
           className={`button ${buttonHover ? 'button-hover' : ''}`}
           onMouseEnter={() => setButtonHover(true)}
@@ -49,7 +50,7 @@ const ProductoCard = ({ imagen, titulo, precio, link }) => {
         >
           Comprar
         </button>
-      </a>
+      </Link>
     </div>
   );
 };
@@ -58,15 +59,15 @@ const MascotaIcon = ({ imagen, nombre, link }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a
-      href={link}
+    <Link
+      to={link}
       className={`mascota-icon ${hovered ? 'mascota-icon-hover' : ''}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       <img src={imagen} alt={nombre} className="mascota-image" />
       <p>{nombre}</p>
-    </a>
+    </Link>
   );
 };
 
@@ -100,12 +101,12 @@ const Productos = ({ defaultc }) => {
       {/* Más comprados */}
       <h2 className="section-title">Productos más comprados</h2>
       <div className="wrap">
-        <ProductoCard imagen="https://i.pinimg.com/736x/57/5f/23/575f23782b6124e9bb8b72f1b10ae1d9.jpg" titulo="Plato para perro" precio="$3.90" link="/producto/pato-para-perro" />
-        <ProductoCard imagen="https://i.pinimg.com/736x/44/41/4c/44414cfdfde3a3295829bc9bad3acec9.jpg" titulo="Comida cachorro" precio="$5.90" link="/producto/comida-cachorro" />
-        <ProductoCard imagen="https://i.pinimg.com/736x/4e/25/0c/4e250cf1217143a9d2403c0db6bc0e4f.jpg" titulo="Correa" precio="$2.50" link="/producto/correa" />
-        <ProductoCard imagen="https://i.pinimg.com/736x/c2/c3/09/c2c309d06e0667f84f2bb5aa93882270.jpg" titulo="Cama redonda" precio="$9.90" link="/producto/cama-redonda" />
-        <ProductoCard imagen="https://i.pinimg.com/736x/7b/31/bf/7b31bffc0bc524c5f437109b07a1dff7.jpg" titulo="Galletas" precio="$4.90" link="/producto/galletas" />
-        <ProductoCard imagen="https://i.pinimg.com/736x/6b/54/2f/6b542f3e490e7f79dbc483841c92f0fe.jpg" titulo="Shampoo" precio="$6.50" link="/producto/shampoo" />
+        <ProductoCard imagen="https://i.pinimg.com/736x/57/5f/23/575f23782b6124e9bb8b72f1b10ae1d9.jpg" titulo="Plato para perro" precio="$3.90" link="/product/plato-para-perro" />
+        <ProductoCard imagen="https://i.pinimg.com/736x/44/41/4c/44414cfdfde3a3295829bc9bad3acec9.jpg" titulo="Comida cachorro" precio="$5.90" link="/product/comida-cachorro" />
+        <ProductoCard imagen="https://i.pinimg.com/736x/4e/25/0c/4e250cf1217143a9d2403c0db6bc0e4f.jpg" titulo="Correa" precio="$2.50" link="/product/correa" />
+        <ProductoCard imagen="https://i.pinimg.com/736x/c2/c3/09/c2c309d06e0667f84f2bb5aa93882270.jpg" titulo="Cama redonda" precio="$9.90" link="/product/cama-redonda" />
+        <ProductoCard imagen="https://i.pinimg.com/736x/7b/31/bf/7b31bffc0bc524c5f437109b07a1dff7.jpg" titulo="Galletas" precio="$4.90" link="/product/galletas" />
+        <ProductoCard imagen="https://i.pinimg.com/736x/6b/54/2f/6b542f3e490e7f79dbc483841c92f0fe.jpg" titulo="Shampoo" precio="$6.50" link="/product/shampoo" />
       </div>
 
       {/* Mascotas */}

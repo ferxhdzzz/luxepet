@@ -5,9 +5,8 @@ import Categorias from './Categorias';
 const Porductosycategoria = () => {
   return (
     <>
-       <Categorias />
+      <Categorias />
       <Prodcutos />
-     
     </>
   );
 };

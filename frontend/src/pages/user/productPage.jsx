@@ -1,10 +1,106 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import './ProductPage.css';
 import CartPage from './CartPagee.jsx';
 
 const ProductPage = () => {
+  const { productId, tipoMascota } = useParams();
   const [showCart, setShowCart] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
+  const [product, setProduct] = useState(null);
+  
+  // Simula una base de datos de productos
+  const productosDB = {
+    // Productos normales por ID
+    "plato-para-perro": {
+      nombre: "Plato para perro",
+      precio: "$3.90",
+      imagen: "https://i.pinimg.com/736x/57/5f/23/575f23782b6124e9bb8b72f1b10ae1d9.jpg",
+      descripcion: "Plato de comida resistente y duradero para tu perro.",
+      rating: 4.5
+    },
+    "comida-cachorro": {
+      nombre: "Comida cachorro",
+      precio: "$5.90",
+      imagen: "https://i.pinimg.com/736x/44/41/4c/44414cfdfde3a3295829bc9bad3acec9.jpg",
+      descripcion: "Comida especial para cachorros en crecimiento con todos los nutrientes necesarios.",
+      rating: 4.8
+    },
+    "correa": {
+      nombre: "Correa",
+      precio: "$2.50",
+      imagen: "https://i.pinimg.com/736x/4e/25/0c/4e250cf1217143a9d2403c0db6bc0e4f.jpg",
+      descripcion: "Correa resistente y ajustable para pasear a tu mascota con seguridad.",
+      rating: 4.2
+    },
+    "cama-redonda": {
+      nombre: "Cama redonda",
+      precio: "$9.90",
+      imagen: "https://i.pinimg.com/736x/c2/c3/09/c2c309d06e0667f84f2bb5aa93882270.jpg",
+      descripcion: "Cama circular suave y confortable para el descanso de tu mascota.",
+      rating: 4.7
+    },
+    "galletas": {
+      nombre: "Galletas",
+      precio: "$4.90",
+      imagen: "https://i.pinimg.com/736x/7b/31/bf/7b31bffc0bc524c5f437109b07a1dff7.jpg",
+      descripcion: "Galletas deliciosas y nutritivas para premiar a tu mascota.",
+      rating: 4.3
+    },
+    "shampoo": {
+      nombre: "Shampoo",
+      precio: "$6.50",
+      imagen: "https://i.pinimg.com/736x/6b/54/2f/6b542f3e490e7f79dbc483841c92f0fe.jpg",
+      descripcion: "Shampoo suave de alta calidad para el pelaje de tu mascota.",
+      rating: 4.0
+    },
+  };
+  
+  // Categorías por tipo de mascota
+  const tiposMascotaDB = {
+    "perros": {
+      nombre: "Productos para Perros",
+      imagen: "https://i.pinimg.com/736x/c9/bf/5c/c9bf5c42f0e73f45f45fd4566f9745bf.jpg",
+      descripcion: "Todos los productos de calidad para tu perro"
+    },
+    "gatos": {
+      nombre: "Productos para Gatos",
+      imagen: "https://i.pinimg.com/736x/55/6a/53/556a53659a2ca18460d0734db94edc74.jpg",
+      descripcion: "Los mejores artículos para tu gato"
+    },
+    // Puedes agregar más tipos de mascotas aquí
+  };
+
+  useEffect(() => {
+    // Si estamos en una ruta de producto específico
+    if (productId) {
+      setProduct(productosDB[productId] || {
+        nombre: "Producto no encontrado",
+        precio: "",
+        imagen: "https://via.placeholder.com/400",
+        descripcion: "Lo sentimos, este producto no existe o ha sido eliminado.",
+        rating: 0
+      });
+    } 
+    // Si estamos en una ruta de tipo de mascota
+    else if (tipoMascota) {
+      setProduct(tiposMascotaDB[tipoMascota] || {
+        nombre: "Categoría no encontrada",
+        imagen: "https://via.placeholder.com/400",
+        descripcion: "Lo sentimos, esta categoría no existe o ha sido eliminada."
+      });
+    }
+    // Si no hay ningún parámetro, mostrar el producto por defecto
+    else {
+      setProduct({
+        nombre: "Camiseta de perro con estampado",
+        precio: "$9.00",
+        imagen: "https://5.imimg.com/data5/ECOM/Default/2024/1/376691210/HC/DP/YV/82542766/huftiputthewagintheswagdogt-shirt-30960d5f-1f24-4548-92e3-2725945be348-500x500.jpg",
+        descripcion: "Linda y cómoda camiseta diseñada especialmente para tu mejor amigo peludo. Confeccionada en un suave material de algodón, esta prenda es ideal para mantener a tu mascota fresca y a gusto durante los días calurosos.",
+        rating: 4.2
+      });
+    }
+  }, [productId, tipoMascota]);
 
   const handleAddToCart = () => {
     setShowCart(true);
@@ -38,6 +134,11 @@ const ProductPage = () => {
 
   if (showCart) {
     return <CartPage onContinueShopping={handleContinueShopping} onCheckout={handleCheckout} />;
+  }
+
+  // Espera hasta que product se cargue
+  if (!product) {
+    return <div>Cargando...</div>;
   }
 
   return (
@@ -182,54 +283,63 @@ const ProductPage = () => {
             <div className="product-layout vertical">
               <div className="product-image-container full-width">
                 <img
-                  src="https://5.imimg.com/data5/ECOM/Default/2024/1/376691210/HC/DP/YV/82542766/huftiputthewagintheswagdogt-shirt-30960d5f-1f24-4548-92e3-2725945be348-500x500.jpg"
-                  alt="Camiseta de perro con estampado"
+                  src={product.imagen}
+                  alt={product.nombre}
                   className="product-image"
                 />
               </div>
 
               <div className="product-info-container full-width">
                 <div className="product-header">
-                  <h2 className="product-title">Camiseta de perro con estampado</h2>
-                  <div className="product-price-tag">
-                    <span>$9.00</span>
-                  </div>
+                  <h2 className="product-title">{product.nombre}</h2>
+                  {product.precio && (
+                    <div className="product-price-tag">
+                      <span>{product.precio}</span>
+                    </div>
+                  )}
                 </div>
 
-                <div className="product-rating">
-                  <span className="rating-label">Calificación:</span>
-                  <div className="stars">
-                    {'★★★★☆'} <span>4.2/5</span>
+                {product.rating !== undefined && (
+                  <div className="product-rating">
+                    <span className="rating-label">Calificación:</span>
+                    <div className="stars">
+                      {'★'.repeat(Math.floor(product.rating)) + '☆'.repeat(5 - Math.floor(product.rating))} <span>{product.rating}/5</span>
+                    </div>
                   </div>
-                </div>
+                )}
 
-                <div className="product-size">
-                  <p className="size-label">Talla:</p>
-                  <div className="size-options">
-                    <button className="size-button">S</button>
-                    <button className="size-button selected">M</button>
-                    <button className="size-button">L</button>
-                    <button className="size-button">XL</button>
+                {product.precio && (
+                  <div className="product-size">
+                    <p className="size-label">Talla:</p>
+                    <div className="size-options">
+                      <button className="size-button">S</button>
+                      <button className="size-button selected">M</button>
+                      <button className="size-button">L</button>
+                      <button className="size-button">XL</button>
+                    </div>
                   </div>
-                </div>
+                )}
 
                 <div className="product-description">
                   <h3 className="description-title">Descripción:</h3>
                   <p className="description-text">
-                    Linda y cómoda camiseta diseñada especialmente para tu mejor amigo peludo. Confeccionada en un suave material de algodón, esta prenda es ideal para mantener a tu mascota fresca y a gusto durante los días calurosos. Su diseño no solo ofrece confort, sino que también permite que tu mascota se mueva libremente. Además, la camiseta viene en diversas tallas y colores, adaptándose a las necesidades y gustos de cada dueño y su fiel compañero. Es perfecta para paseos, días en el parque o simplemente para que tu peludo luzca a la moda en casa.
+                    {product.descripcion}
                   </p>
                 </div>
 
-
                 <br /> <br /> <br />
-                <div className="add-to-cart-container">
-                  <button
-                    onClick={handleAddToCart}
-                    className="add-to-cart-button"
-                  >
-                    Añadir al carrito
-                  </button>
-                </div>
+                {product.precio && (
+                  <div className="add-to-cart-container">
+                    <button
+                      onClick={handleAddToCart}
+                      className="add-to-cart-button"
+                    >
+                      Añadir al carrito
+                    </button>
+                  </div>
+                )}
+                
+                <Link to="/products" className="back-button">← Volver a productos</Link>
               </div>
             </div>
           </div>
