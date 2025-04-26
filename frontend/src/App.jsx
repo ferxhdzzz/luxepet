@@ -13,6 +13,7 @@ import Carrito from './pages/user/CartPagee'
 
 import Configuration from './pages/user/configuration'
 import ProductPage from './pages/user/productPage'
+import Contactanos from './pages/Contactanos'
 
 
 
@@ -38,7 +39,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/configuration" element={<Configuration />} />
           <Route path="/products" element={<Productsycat />} />
-      
+          <Route path="/contact" element={<Contactanos />} />
           <Route path="/cart" element={<Carrito />} />
           
           {/* Nuevas rutas dinámicas para productos */}
