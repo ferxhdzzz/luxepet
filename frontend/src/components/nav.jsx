@@ -24,7 +24,7 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/gato" className="fw-bold">
+            <Nav.Link as={Link} to="/" className="fw-bold">
               Inicio
             </Nav.Link>
             <Nav.Link as={Link} to="/about" className="fw-bold">
@@ -42,6 +42,9 @@ const Navigation = () => {
             </Nav.Link>
             <Nav.Link as={Link} to="/prueba" className="fw-bold">
               Prueba
+            </Nav.Link>
+            <Nav.Link as={Link} to="/login" className="fw-bold">
+              Login
             </Nav.Link>
 
             {/* Carrito de compras */}
