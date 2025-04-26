@@ -43,6 +43,16 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/login" className="fw-bold">
               Login
             </Nav.Link>
+            <Nav.Link as={Link} to="/terminos" className="fw-bold">
+              Terminos
+            </Nav.Link>
+            <Nav.Link as={Link} to="/enviar" className="fw-bold">
+              Enviar cod
+            </Nav.Link>
+            <Nav.Link as={Link} to="/actualizar" className="fw-bold">
+              Actualizar
+            </Nav.Link>
+            
 
             {/* Carrito de compras */}
             <Nav.Link as={Link} to="/cart" className="fw-bold position-relative">

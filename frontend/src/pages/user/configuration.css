@@ -229,3 +229,10 @@ input[name="confirmarContrasena"]::placeholder {
     color: #9ca3af;
     font-size: 0.9rem;
 }
+.config-container{
+
+    display: flex;
+    height: 120vh;
+    background: linear-gradient(to  bottom left, #fff 50%, #59A8D6 100%);
+    font-family: 'Poppins', Arial, sans-serif;
+}
