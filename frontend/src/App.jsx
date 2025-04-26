@@ -8,6 +8,7 @@ import HeroNav from './components/heronav'
 import Productsycat from './pages/ProductosyCatt'
 
 import Loginn from './pages/login'
+import Carrito from './pages/user/CartPagee'
 
 
 import Configuration from './pages/user/configuration'
@@ -38,7 +39,7 @@ function App() {
           <Route path="/configuration" element={<Configuration />} />
           <Route path="/products" element={<Productsycat />} />
       
-          <Route path="/prueba" element={<ProductPage />} />
+          <Route path="/cart" element={<Carrito />} />
           
           {/* Nuevas rutas dinámicas para productos */}
           <Route path="/product/:productId" element={<ProductPage />} />
