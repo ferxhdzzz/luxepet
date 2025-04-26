@@ -40,9 +40,6 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/configuration" className="fw-bold">
               Perfil
             </Nav.Link>
-            <Nav.Link as={Link} to="/prueba" className="fw-bold">
-              Prueba
-            </Nav.Link>
             <Nav.Link as={Link} to="/login" className="fw-bold">
               Login
             </Nav.Link>

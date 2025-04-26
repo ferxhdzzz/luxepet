@@ -6,7 +6,8 @@ function Login() {
   return (
     <div className="page">
       <div className="left-section">
-        <img src="/luxe.svg" alt="Logo LuxePet" className="logo" />
+      <img src="/luxe.svg" alt="Logo LuxePet" className="logo" />
+
         <p className="description">
           Bienvenido a LuxePet, el destino exclusivo para consentir a tu mascota. Inicia sesión para descubrir una selección de artículos diseñados para el bienestar de tu mascota.
         </p>
