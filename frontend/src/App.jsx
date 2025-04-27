@@ -17,6 +17,8 @@ import Contactanos from './pages/Contactanos'
 import Terminos from './pages/Terminos'
 import Enviarcod from './pages/Enviarcodigo'
 import Actualizar from './pages/Actualizarcontra'
+import TiendaHistoria from './pages/TiendaHistoria'
+
 
 
 
@@ -47,12 +49,17 @@ function App() {
           <Route path="/enviar" element={<Enviarcod />} />
           <Route path="/actualizar" element={<Actualizar />} />
           <Route path="/cart" element={<Carrito />} />
+          <Route path="/About" element={<TiendaHistoria />} />
+
           
           {/* Nuevas rutas dinámicas para productos */}
           <Route path="/product/:productId" element={<ProductPage />} />
           <Route path="/producto/:productId" element={<ProductPage />} />
           <Route path="/mascota/:tipoMascota" element={<ProductPage />} />
           <Route path="/popular/:productId" element={<ProductPage />} />
+          <Route path="/historia" element={<TiendaHistoria/>} />
+
+
 
         </Routes>
       </Router>
