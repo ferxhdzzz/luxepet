@@ -25,7 +25,7 @@ function EnviarCodigo() {
   
           <div className="form-group">
             <label className="label">Código de confirmación</label>
-            <input type="password" className="inputt" placeholder="" />
+            <input type="text" className="inputt" placeholder="" />
           </div>
           <br />
           <br />
