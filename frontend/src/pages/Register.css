@@ -1,7 +1,7 @@
 /* Aplicar fuente Poppins a toda la página */
 .page {
     display: flex;
-    height: 100vh;
+    height: 150vh;
     background: linear-gradient(to bottom left, #EEEEEE 78%, #59A8D6 100%);
     font-family: 'Poppins', Arial, sans-serif;
   }

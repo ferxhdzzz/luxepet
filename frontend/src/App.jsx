@@ -18,7 +18,7 @@ import Terminos from './pages/Terminos'
 import Enviarcod from './pages/Enviarcodigo'
 import Actualizar from './pages/Actualizarcontra'
 import TiendaHistoria from './pages/TiendaHistoria'
-
+import Registro from './pages/Register'
 
 
 
@@ -50,6 +50,7 @@ function App() {
           <Route path="/actualizar" element={<Actualizar />} />
           <Route path="/cart" element={<Carrito />} />
           <Route path="/About" element={<TiendaHistoria />} />
+          <Route path="/register" element={<Registro />} />
 
           
           {/* Nuevas rutas dinámicas para productos */}
