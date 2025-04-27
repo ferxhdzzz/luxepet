@@ -1,9 +1,9 @@
 import React from 'react';
-import './Login.css'; // Sigue usando el mismo CSS
+import './Register.css'; // Sigue usando el mismo CSS
 
 function register() {
   return (
-    <div className="page">
+    <div className="pagee">
       <div className="left-section">
         <img src="/luxe.svg" alt="Logo LuxePet" className="logo" />
 
@@ -15,22 +15,22 @@ function register() {
 
         <div className="form-group">
           <label className="label">Nombre</label>
-          <input type="text" className="input" placeholder="Ingresa tu nombre" />
+          <input type="text" className="input" placeholder="" />
         </div>
 
         <div className="form-group">
           <label className="label">Apellido</label>
-          <input type="text" className="input" placeholder="Ingresa tu apellido" />
+          <input type="text" className="input" placeholder="" />
         </div>
 
         <div className="form-group">
           <label className="label">Usuario</label>
-          <input type="text" className="input" placeholder="Crea un nombre de usuario" />
+          <input type="text" className="input" placeholder="" />
         </div>
 
         <div className="form-group">
           <label className="label">Contraseña</label>
-          <input type="password" className="input" placeholder="Crea una contraseña" />
+          <input type="password" className="input" placeholder="" />
         </div>
 
         <div className="form-group">
@@ -44,7 +44,7 @@ function register() {
           <p>¿Ya tienes una cuenta? <a href="/login" className="link">Iniciar sesión</a></p>
         </div>
       </div>
-
+      
       <div className="right-section">
         <img src="https://i.pinimg.com/736x/ee/77/c5/ee77c564dfc5c3d1ae92f6e6c4e980a0.jpg" alt="App Preview" className="right-image" />
       </div>

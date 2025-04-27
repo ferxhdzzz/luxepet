@@ -1,95 +1,119 @@
 /* Estilos generales */
 
+/* Reset de márgenes y paddings generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Estilos generales */
 .navbar {
-    background-color: #a6d3f2 !important;
-    padding: 10px 20px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Ajuste para evitar que el contenido quede oculto detrás de la navbar */
-  body {
-    padding-top: 80px;
-  }
-  
-  /* Sección Hero */
-  .hero-section {
-    background-color: #a6d3f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 89vh;
-    padding: 50px 0;
-  }
-  
-  .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-  }
-  
-  /* Texto del Hero */
-  .hero-text {
-    max-width: 50%;
-  }
-  
-  .hero-text h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #000;
-  }
-  
-  .hero-text p {
-    font-size: 1.2rem;
-    color: #333;
-    margin: 20px 0;
-  }
-  
-  /* Botón personalizado */
-  .btn-custom {
-    background-color: #033a2b;
-    color: white;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    border: none;
-    min-width: 200px; /* ← fuerza a que el botón sea más largo */
-    text-align: center;
-  }
-  
-  .btn-custom:hover {
-    background-color: #02261e;
-    color: white;
-  }
-  
+  background-color: #a6d3f2 !important;
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste para evitar que el contenido quede oculto detrás de la navbar */
+body {
+  padding-top: 80px;
+}
+
+/* Sección Hero */
+.hero-section {
+  background-color: #a6d3f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 89vh;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: stretch; /* ← cambio importante */
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%; /* ← añadido */
+}
+
+/* Texto del Hero */
+.hero-text {
+  max-width: 50%;
+  display: flex; /* ← añadido */
+  flex-direction: column; /* ← añadido */
+  justify-content: center; /* ← añadido */
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* Botón personalizado */
+.btn-custom {
+  background-color: #033a2b;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  min-width: 200px;
+  text-align: center;
+}
+
+.btn-custom:hover {
+  background-color: #02261e;
+  color: white;
+}
+
+/* Imagen del Hero */
+.hero-image {
+  display: flex; /* ← añadido */
+  align-items: flex-end; /* ← añadido */
+  justify-content: center; /* ← añadido */
+  flex: 1; /* ← añadido */
+}
 
 .hero-image img {
-    max-width: 600px;
-    height: auto;
-    margin-top: -215px; 
+  max-width: 600px;
+  height: auto;
+  margin: 0; /* ← eliminado margin-top negativo */
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  
-  @media (max-width: 992px) {
-    .hero-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .hero-text {
-      max-width: 100%;
-    }
-  
-    .hero-image img {
-      max-width: 300px;
-      margin-top: 20px;
-    }
+
+  .hero-text {
+    max-width: 100%;
   }
-  
+
+  .hero-image {
+    align-items: center; /* para centrar en móviles */
+    margin-top: 20px;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+    margin: 0;
+  }
+}

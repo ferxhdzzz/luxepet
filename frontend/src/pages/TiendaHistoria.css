@@ -52,7 +52,7 @@
     flex-wrap: wrap;
   }
   
-  .card {
+  .cards {
    
     padding: 20px;
     border-radius: 12px;
@@ -60,7 +60,7 @@
     width: 200px;
   }
   
-  .card img {
+  .cards img {
     width: 100%;
     height: 300px;
     border-radius: 12px;
