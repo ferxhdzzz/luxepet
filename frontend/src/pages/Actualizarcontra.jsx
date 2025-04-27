@@ -26,7 +26,7 @@ function ActualizarContra() {
     
             <div className="form-group">
               <label className="label">Confirmacion de contraseña</label>
-              <input type="password" className="inputt" placeholder="" />
+              <input type="text" className="inputt" placeholder="" />
             </div>
             <br />
             <br />
