@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaFacebookF, FaInstagram, FaXTwitter, FaGithub } from 'react-icons/fa6';
 import './Footer.css';
 
 function Footer() {
@@ -8,18 +9,32 @@ function Footer() {
       <div className="footer-top">
         {/* Logo */}
         <div className="footer-logo">
-          <img src="/luxe.svg" alt="Tu Logo" /> {/* Ajusta la ruta de tu logo */}
+          <img src="/luxe.svg" alt="Tu Logo" />
+          
+          {/* Redes sociales */}
+          <div className="footer-socials">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <FaXTwitter />
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+            </a>
+          </div>
         </div>
 
         {/* Secciones */}
         <div className="footer-sections">
-
           <div className="footer-section">
             <h4>Empresa</h4>
             <ul>
               <li><Link to="/historia">¿Quiénes somos?</Link></li>
               <li><Link to="/products">Tienda</Link></li>
-
             </ul>
           </div>
 
@@ -39,14 +54,13 @@ function Footer() {
               <li><Link to="/cart">Mi carrito</Link></li>
             </ul>
           </div>
-
         </div>
       </div>
 
       {/* Línea y texto final */}
       <div className="footer-bottom">
         <hr />
-        <p>© 2025 TuTienda. Todos los derechos reservados.</p>
+        <p>© 2025 LuxePet. Todos los derechos reservados.</p>
       </div>
     </footer>
   );
