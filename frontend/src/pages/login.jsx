@@ -1,6 +1,7 @@
 import React from 'react';
 import './Login.css';
-import { useNavigate } from 'react-router-dom'; // Siempre se tiene que exportar useNavigate para la navegación
+
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
 
@@ -33,7 +34,7 @@ function Login() {
         </div>
 
         <div className="link-container">
-          <a href="/forgot-password" className="link">¿Olvidaste la contraseña?</a>
+          <Link to="/actualizar" className="link">¿Olvidaste la contraseña?</Link>
         </div>
 
         <button className="button-login" onClick={handleLogin}>Iniciar sesión</button>

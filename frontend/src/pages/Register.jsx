@@ -2,11 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Siempre se tiene que exportar useNavigate para la navegación
 import './Register.css';
 
-function Register() { 
-  const navigate = useNavigate(); 
+function Register() {
+  const navigate = useNavigate();
 
   const handleLogin = () => {
-    navigate('/products'); 
+    navigate('/products');
   };
 
   return (
@@ -46,7 +46,7 @@ function Register() {
         </div>
 
         <button className="button-login" onClick={handleLogin}>Ingresar</button>
-      
+
         <div className="register-container">
           <p>¿Ya tienes una cuenta? <a href="/login" className="link">Iniciar sesión</a></p>
         </div>
