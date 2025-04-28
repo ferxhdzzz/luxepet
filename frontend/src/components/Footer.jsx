@@ -27,7 +27,7 @@ function Footer() {
             <h4>Atención al cliente</h4>
             <ul>
               <li><Link to="/contact">Contacto</Link></li>
-              <li><Link to="/terminos">Términos y condiciones</Link></li>
+              <li><Link to="/Terminos">Términos y condiciones</Link></li>
             </ul>
           </div>
 

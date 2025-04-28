@@ -40,6 +40,9 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/configuration" className="fw-bold">
               Perfil
             </Nav.Link>
+            <Nav.Link as={Link} to="/Terminos" className="fw-bold">
+              terminos
+            </Nav.Link>
 
             {/* Carrito de compras */}
             <Nav.Link as={Link} to="/cart" className="fw-bold position-relative">

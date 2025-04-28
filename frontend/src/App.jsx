@@ -38,6 +38,7 @@ function App() {
           <Route path="/products" element={<Productsycat />} />
           <Route path="/contact" element={<Contactanos />} />
           <Route path="/actualizar" element={<Actualizar />} />
+          <Route path="/Terminos" element={<Terminos />} />
           <Route path="/cart" element={<Carrito />} />
           <Route path="/About" element={<TiendaHistoria />} />
           <Route path="/register" element={<Registro />} />
