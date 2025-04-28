@@ -1,7 +1,14 @@
 import React from 'react';
-import './Register.css'; // Sigue usando el mismo CSS
+import { useNavigate } from 'react-router-dom'; // Siempre se tiene que exportar useNavigate para la navegación
+import './Register.css';
 
-function register() {
+function Register() { 
+  const navigate = useNavigate(); 
+
+  const handleLogin = () => {
+    navigate('/products'); 
+  };
+
   return (
     <div className="pagee">
       <div className="left-section">
@@ -38,13 +45,13 @@ function register() {
           <input type="date" className="input" />
         </div>
 
-        <button className="button-login">Ingresar</button>
-
+        <button className="button-login" onClick={handleLogin}>Ingresar</button>
+      
         <div className="register-container">
           <p>¿Ya tienes una cuenta? <a href="/login" className="link">Iniciar sesión</a></p>
         </div>
       </div>
-      
+
       <div className="right-section">
         <img src="https://i.pinimg.com/736x/ee/77/c5/ee77c564dfc5c3d1ae92f6e6c4e980a0.jpg" alt="App Preview" className="right-image" />
       </div>
@@ -52,4 +59,4 @@ function register() {
   );
 }
 
-export default register;
+export default Register; 

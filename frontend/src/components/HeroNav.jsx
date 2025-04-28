@@ -16,7 +16,7 @@ const HeroNav = () => {
               Bienvenido al sitio web de Luxe Pet, es un placer tenerte con nosotros.
               Ingresa a comenzar tu compra para tener la mejor experiencia para ti y tu mascota.
             </p>
-            <Button as={Link} to="/products" className="btn-custom">
+            <Button as={Link} to="/Register" className="btn-custom">
               Comienza tu compra
             </Button>
           </div>

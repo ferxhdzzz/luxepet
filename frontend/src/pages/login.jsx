@@ -1,12 +1,20 @@
 import React from 'react';
-import './Login.css'; // <-- Asegúrate que importas tu CSS
-
+import './Login.css';
+import { useNavigate } from 'react-router-dom'; // Siempre se tiene que exportar useNavigate para la navegación
 
 function Login() {
+
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate('/products');
+  };
+
+
   return (
     <div className="page">
       <div className="left-section">
-      <img src="/luxe.svg" alt="Logo LuxePet" className="logo" />
+        <img src="/luxe.svg" alt="Logo LuxePet" className="logo" />
 
         <p className="description">
           Bienvenido a LuxePet, el destino exclusivo para consentir a tu mascota. Inicia sesión para descubrir una selección de artículos diseñados para el bienestar de tu mascota.
@@ -28,7 +36,7 @@ function Login() {
           <a href="/forgot-password" className="link">¿Olvidaste la contraseña?</a>
         </div>
 
-        <button className="button-login">Iniciar sesión</button>
+        <button className="button-login" onClick={handleLogin}>Iniciar sesión</button>
 
         <div className="register-container">
           <p>¿No tienes cuenta? <a href="/register" className="link">Regístrate</a></p>
@@ -36,8 +44,8 @@ function Login() {
       </div>
 
       <div className="right-section">
-  <img src="https://i.pinimg.com/736x/ee/77/c5/ee77c564dfc5c3d1ae92f6e6c4e980a0.jpg" alt="App Preview" className="right-image" />
-</div>
+        <img src="https://i.pinimg.com/736x/ee/77/c5/ee77c564dfc5c3d1ae92f6e6c4e980a0.jpg" alt="App Preview" className="right-image" />
+      </div>
 
     </div>
   );

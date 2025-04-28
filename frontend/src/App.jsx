@@ -25,7 +25,7 @@ import Registro from './pages/Register'
 function App() {
 
 
-  
+
   return (
     <>
       <Router>
@@ -33,9 +33,9 @@ function App() {
         <Routes>
 
           {/* Rutas */}
-          
+
           <Route path="/configuration" element={<Configuration />} />
-          <Route path="/products" element={<Productsycat /> }  />
+          <Route path="/products" element={<Productsycat />} />
           <Route path="/" element={<HeroNav />} />
           <Route path="/login" element={<Loginn />} />
           {/* Demas rutas por agregar */}
@@ -52,13 +52,13 @@ function App() {
           <Route path="/About" element={<TiendaHistoria />} />
           <Route path="/register" element={<Registro />} />
 
-          
+
           {/* Nuevas rutas dinámicas para productos */}
           <Route path="/product/:productId" element={<ProductPage />} />
           <Route path="/producto/:productId" element={<ProductPage />} />
           <Route path="/mascota/:tipoMascota" element={<ProductPage />} />
           <Route path="/popular/:productId" element={<ProductPage />} />
-          <Route path="/historia" element={<TiendaHistoria/>} />
+          <Route path="/historia" element={<TiendaHistoria />} />
 
 
 
