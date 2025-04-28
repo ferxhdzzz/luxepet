@@ -8,7 +8,7 @@ function Footer() {
       <div className="footer-top">
         {/* Logo */}
         <div className="footer-logo">
-          <img src="/logo.png" alt="Tu Logo" /> {/* Ajusta la ruta de tu logo */}
+          <img src="/luxe.svg" alt="Tu Logo" /> {/* Ajusta la ruta de tu logo */}
         </div>
 
         {/* Secciones */}
@@ -19,7 +19,7 @@ function Footer() {
             <ul>
               <li><Link to="/historia">¿Quiénes somos?</Link></li>
               <li><Link to="/products">Tienda</Link></li>
-              <li><Link to="/popular">Productos populares</Link></li>
+
             </ul>
           </div>
 
@@ -28,7 +28,6 @@ function Footer() {
             <ul>
               <li><Link to="/contact">Contacto</Link></li>
               <li><Link to="/terminos">Términos y condiciones</Link></li>
-              <li><Link to="/privacidad">Política de privacidad</Link></li>
             </ul>
           </div>
 

@@ -12,11 +12,11 @@ const Navigation = () => {
       <Container>
         {/* Logo */}
         <Navbar.Brand as={Link} to="/">
-        <img
-    src="/luxe.svg"
-    alt="LuxePet Logo"
-    className="nav-logo"
-  />{" "}
+          <img
+            src="/luxe.svg"
+            alt="LuxePet Logo"
+            className="nav-logo"
+          />{" "}
           <br />
           <br />
         </Navbar.Brand>
@@ -33,27 +33,12 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/products" className="fw-bold">
               Productos
             </Nav.Link>
-            
+
             <Nav.Link as={Link} to="/contact" className="fw-bold">
               Contáctanos
             </Nav.Link>
             <Nav.Link as={Link} to="/configuration" className="fw-bold">
               Perfil
-            </Nav.Link>
-            <Nav.Link as={Link} to="/login" className="fw-bold">
-              Login
-            </Nav.Link>
-            <Nav.Link as={Link} to="/terminos" className="fw-bold">
-              Terminos
-            </Nav.Link>
-            <Nav.Link as={Link} to="/enviar" className="fw-bold">
-              Enviar cod
-            </Nav.Link>
-            <Nav.Link as={Link} to="/actualizar" className="fw-bold">
-              Actualizar
-            </Nav.Link>
-            <Nav.Link as={Link} to="/register" className="fw-bold">
-              Registro
             </Nav.Link>
 
             {/* Carrito de compras */}

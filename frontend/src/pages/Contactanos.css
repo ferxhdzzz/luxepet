@@ -1,6 +1,10 @@
 .contact-page {
     font-family: 'Poppins', sans-serif;
-    height: 105vh;
+    /* Paerte donde de se veia mal*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px; /* Espacio para el footer */
 }
 
 .header-image img {
@@ -11,18 +15,18 @@
 
 .contact-section {
     display: flex;
-    justify-content: center; /* Centra los elementos en el contenedor */
-    align-items: flex-start; /* Asegura que ambos elementos estén alineados en la parte superior */
+    justify-content: center; /* para que los elementos del contenedor se vea centrado*/
+    align-items: flex-start; 
     padding: 50px;
-    gap: 20px; /* Espacio entre las dos secciones */
+    gap: 20px; /* Espacio */
     background-color: #fff;
 }
 
 .contact-info {
-    flex: 0 0 40%; /* Ajusta el tamaño de la sección de contacto */
+    flex: 0 0 40%; 
     padding-right: 30px;
-    position: relative; /* Permite mover la sección */
-    margin-top: 100px; /* Mueve la sección de la izquierda hacia abajo */
+    position: relative; 
+    margin-top: 100px; 
 }
 
 .contact-info h2 {
@@ -92,6 +96,7 @@ button:hover {
     justify-content: center;
     padding: 4rem 2rem;
     gap: 4rem;
+    margin-bottom: 20px; /* a qui le agrege espacio entre los testimonios y el footer */
 }
 
 .testimonios-texto {
@@ -124,4 +129,20 @@ button:hover {
     height: 250px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+    
+    .contact-form {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .testimonios {
+        flex-direction: column;
+    }
 }
