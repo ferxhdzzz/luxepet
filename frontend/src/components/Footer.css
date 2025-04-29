@@ -1,186 +1,186 @@
 /* Estilos para el footer */
 .footer {
-  background-color: #F8F9FA;
-  color: #000000;
-  font-family: 'Poppins', sans-serif;
-  padding: 40px 20px 20px;
-  background-image: url('/patitas.png'); /* Ruta relativa desde /public */
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 50% auto; /* 50% del ancho */
+  background-color: #F8F9FA; /* Fondo claro para el footer */
+  color: #000000; /* Texto en color negro */
+  font-family: 'Poppins', sans-serif; /* Tipografía Poppins */
+  padding: 40px 20px 20px; /* Espaciado interno: arriba 40px, lados 20px, abajo 20px */
+  background-image: url('/patitas.png'); /* Imagen decorativa de fondo (desde /public) */
+  background-repeat: no-repeat; /* No repetir la imagen de fondo */
+  background-position: left center; /* Posición: izquierda y centrado verticalmente */
+  background-size: 50% auto; /* Imagen ocupa 50% del ancho, altura automática */
 }
 
 .footer-top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex; /* Usa flexbox */
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: flex-start; /* Alinea los elementos al principio del eje vertical */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrado horizontal */
 }
 
 .footer-logo img {
-  width: 150px;
+  width: 150px; /* Tamaño del logo */
 }
 
 .footer-sections {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
+  display: flex; /* Usa flexbox */
+  flex-wrap: wrap; /* Permite el salto de línea de las secciones */
+  gap: 60px; /* Espacio entre secciones */
 }
 
 .footer-section {
-  min-width: 150px;
+  min-width: 150px; /* Ancho mínimo por sección */
 }
 
 .footer-section h4 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
+  font-size: 18px; /* Tamaño del título de sección */
+  margin-bottom: 15px; /* Espacio debajo del título */
+  font-weight: bold; /* Texto en negrita */
 }
 
 .footer-section ul {
-  list-style: none;
-  padding: 0;
+  list-style: none; /* Elimina viñetas de la lista */
+  padding: 0; /* Elimina padding por defecto */
 }
 
 .footer-section ul li {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Espacio entre elementos de la lista */
 }
 
 .footer-section ul li a {
-  color: #000000;
-  text-decoration: none;
-  transition: color 0.3s;
+  color: #000000; /* Enlaces en negro */
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s; /* Transición suave al cambiar color */
 }
 
 .footer-section ul li a:hover {
-  color: #fff;
+  color: #fff; /* Enlace se vuelve blanco al pasar el mouse */
 }
 
 .footer-bottom {
-  max-width: 1200px;
-  margin: 30px auto 0;
-  text-align: center;
+  max-width: 1200px; /* Ancho máximo */
+  margin: 30px auto 0; /* Margen superior y centrado horizontal */
+  text-align: center; /* Texto centrado */
 }
 
 .footer-bottom hr {
-  border: 0;
-  border-top: 1px solid #444;
-  margin-bottom: 15px;
+  border: 0; /* Sin borde predeterminado */
+  border-top: 1px solid #444; /* Línea superior gris oscuro */
+  margin-bottom: 15px; /* Espacio debajo de la línea */
 }
 
 .footer-bottom p {
-  font-size: 14px;
-  color: #000000;
+  font-size: 14px; /* Tamaño pequeño para el texto */
+  color: #000000; /* Color negro */
 }
 
 .footer-socials {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
+  margin-top: 20px; /* Espacio superior */
+  display: flex; /* Flexbox para alinear íconos */
+  gap: 15px; /* Espacio entre íconos */
 }
 
 .footer-socials a {
-  color: #000000;
-  font-size: 20px;
-  transition: color 0.3s;
+  color: #000000; /* Color de ícono */
+  font-size: 20px; /* Tamaño del ícono */
+  transition: color 0.3s; /* Transición suave */
 }
 
 .footer-socials a:hover {
-  color: #555; /* Un gris más claro al pasar el mouse */
+  color: #555; /* Cambia a gris claro al pasar el mouse */
 }
 
 /* Estilos responsivos */
 @media (max-width: 1200px) {
   .footer-top {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Cambia disposición a columna */
+    align-items: center; /* Centra los elementos */
   }
 
   .footer-sections {
-    gap: 30px;
-    justify-content: center;
+    gap: 30px; /* Reduce espacio entre secciones */
+    justify-content: center; /* Centrado horizontal */
   }
 
   .footer-section {
-    min-width: 120px;
+    min-width: 120px; /* Ancho mínimo más pequeño */
   }
 
   .footer-logo img {
-    width: 120px;
+    width: 120px; /* Tamaño del logo reducido */
   }
 }
 
 @media (max-width: 768px) {
   .footer-top {
-    padding: 20px;
+    padding: 20px; /* Menor padding interno */
   }
 
   .footer-sections {
-    gap: 20px;
-    justify-content: center;
+    gap: 20px; /* Menor espacio entre secciones */
+    justify-content: center; /* Centrado */
   }
 
   .footer-section {
-    min-width: 100px;
+    min-width: 100px; /* Secciones aún más angostas */
   }
 
   .footer-logo img {
-    width: 100px;
+    width: 100px; /* Logo más pequeño */
   }
 
   .footer-bottom p {
-    font-size: 12px;
+    font-size: 12px; /* Texto más pequeño */
   }
 
   .footer-socials {
-    margin-top: 10px;
-    gap: 10px;
+    margin-top: 10px; /* Menor espacio arriba */
+    gap: 10px; /* Menor espacio entre íconos */
   }
 
   .footer-socials a {
-    font-size: 18px;
+    font-size: 18px; /* Íconos más pequeños */
   }
 }
 
 @media (max-width: 480px) {
   .footer-top {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* Acomoda en columna */
+    align-items: center; /* Centra elementos */
+    text-align: center; /* Centra texto */
   }
 
   .footer-sections {
-    gap: 15px;
+    gap: 15px; /* Menor espacio entre secciones */
   }
 
   .footer-section {
-    min-width: 100px;
+    min-width: 100px; /* Ancho mínimo reducido */
   }
 
   .footer-logo img {
-    width: 90px;
+    width: 90px; /* Tamaño de logo más pequeño */
   }
 
   .footer-bottom {
-    margin-top: 15px;
+    margin-top: 15px; /* Margen superior reducido */
   }
 
   .footer-bottom hr {
-    margin: 10px 0;
+    margin: 10px 0; /* Margen vertical más ajustado */
   }
 
   .footer-bottom p {
-    font-size: 12px;
+    font-size: 12px; /* Texto más pequeño */
   }
 
   .footer-socials {
-    margin-top: 10px;
-    gap: 8px;
+    margin-top: 10px; /* Espacio reducido */
+    gap: 8px; /* Menor espacio entre íconos */
   }
 
   .footer-socials a {
-    font-size: 16px;
+    font-size: 16px; /* Íconos aún más pequeños */
   }
 }
