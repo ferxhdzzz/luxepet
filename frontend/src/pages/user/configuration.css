@@ -1,92 +1,102 @@
-/*Estilo de perfil/Configuración*/
+/* Estilo de perfil/configuración */
 .config-container {
+    /* Establece el contenedor principal como un flexbox centrado tanto vertical como horizontalmente */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f9fafb;
-    padding: 20px;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    min-height: 100vh;         /* Mínima altura del contenedor para llenar la pantalla */
+    background-color: #f9fafb; /* Color de fondo suave */
+    padding: 20px;             /* Espaciado interno */
 }
 
 .config-wrapper {
-    width: 100%;
-    max-width: 1024px;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    /* Wrapper que contiene los elementos de configuración */
+    width: 100%;                 /* Ocupa todo el ancho disponible */
+    max-width: 1024px;           /* Ancho máximo */
+    display: flex;               /* Usa Flexbox para alinear los elementos */
+    flex-direction: row;         /* Por defecto, los elementos se colocan en fila */
+    gap: 20px;                   /* Espacio entre los elementos */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    /* En pantallas con ancho de 1024px o menos, cambia la dirección de los elementos a columna */
     .config-wrapper {
         flex-direction: column;
     }
 }
 
-/* Left Side - User Info Panel */
+/* Left side - Panel de información de usuario */
 .user-info-panel {
-    width: 33%;
-    background-color: white;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Panel que contiene la información del usuario */
+    width: 33%;                 /* Ocupa un tercio del ancho */
+    background-color: white;    /* Fondo blanco */
+    padding: 24px;              /* Espaciado interno */
+    border-radius: 8px;         /* Bordes redondeados */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 @media (max-width: 768px) {
+    /* En pantallas de 768px o menos, el panel de usuario ocupa el 100% del ancho */
     .user-info-panel {
         width: 100%;
     }
 }
 
 .user-avatar-container {
+    /* Contenedor para la foto de usuario */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 24px;
+    align-items: center;       /* Centra la imagen */
+    margin-bottom: 24px;       /* Espaciado inferior */
 }
 
 .user-avatar {
+    /* Estilo para el avatar (foto de usuario) */
     width: 80px;
     height: 80px;
-    background-color: #f3f4f6;
-    border-radius: 50%;
+    background-color: #f3f4f6; /* Fondo gris claro */
+    border-radius: 50%;         /* Forma circular */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #e5e7eb;
+    align-items: center;       /* Centra el contenido dentro */
+    justify-content: center;   /* Centra el contenido dentro */
+    border: 1px solid #e5e7eb; /* Borde gris claro */
 }
 
 .avatar-svg {
+    /* Tamaño del SVG que representa el avatar */
     width: 48px;
     height: 48px;
 }
 
 .user-info-header {
-    margin-top: 8px;
-    text-align: center;
+    margin-top: 8px;           /* Espaciado superior */
+    text-align: center;        /* Centra el texto */
 }
 
 .username {
-    font-weight: 500;
+    font-weight: 500;          /* Peso de la fuente para el nombre */
 }
 
 .user-id {
-    font-size: 0.875rem;
-    color: #6b7280;
+    font-size: 0.875rem;       /* Tamaño pequeño */
+    color: #6b7280;            /* Color gris */
 }
 
 .user-details {
-    border-top: 1px solid #e5e7eb;
-    padding-top: 16px;
+    /* Estilo para los detalles del usuario debajo del nombre */
+    border-top: 1px solid #e5e7eb; /* Línea separadora */
+    padding-top: 16px;          /* Espaciado superior */
 }
 
 .section-title {
+    /* Estilo para los títulos de sección */
     font-size: 0.875rem;
     font-weight: 500;
     margin-bottom: 12px;
 }
 
 .info-row {
-    margin-bottom: 8px;
+    margin-bottom: 8px;         /* Espaciado inferior */
 }
 
 .info-label {
@@ -95,25 +105,27 @@
 }
 
 .info-value {
-    font-size: 0.875rem;
+    font-size: 0.875rem;        /* Tamaño de la fuente para los valores */
 }
 
-/* Form panel */
+/* Panel de formulario */
 .form-panel {
-    width: 67%;
-    background-color: white;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 67%;                 /* Ocupa los dos tercios restantes */
+    background-color: white;    /* Fondo blanco */
+    padding: 24px;              /* Espaciado interno */
+    border-radius: 8px;         /* Bordes redondeados */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 @media (max-width: 768px) {
+    /* En pantallas más pequeñas, el panel de formulario ocupa el 100% del ancho */
     .form-panel {
         width: 100%;
     }
 }
 
 .panel-title {
+    /* Estilo para el título principal del formulario */
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 20px;
@@ -121,23 +133,26 @@
 }
 
 .form-row {
+    /* Estilo para la disposición de los campos del formulario en dos columnas */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 20px;    
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 16px;                      /* Espacio entre las columnas */
+    margin-bottom: 20px;
 }
 
 @media (max-width: 640px) {
+    /* En pantallas más pequeñas, se cambia a una sola columna */
     .form-row {
         grid-template-columns: 1fr;
     }
 }
 
 .form-group {
-    margin-bottom: 12px;
+    margin-bottom: 12px;           /* Espaciado inferior de cada grupo de formulario */
 }
 
 .form-label {
+    /* Estilo para las etiquetas de los campos de formulario */
     display: block;
     font-size: 0.9rem;
     font-weight: 500;
@@ -146,36 +161,41 @@
 }
 
 .form-input {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    background-color: #f3f4f6;
+    /* Estilo para los campos de entrada del formulario */
+    width: 100%;                   /* Ancho completo */
+    padding: 10px 12px;            /* Relleno interno */
+    border: 1px solid #e5e7eb;     /* Borde gris claro */
+    border-radius: 8px;            /* Bordes redondeados */
+    background-color: #f3f4f6;     /* Fondo gris claro */
     font-size: 0.9rem;
 }
 
 .form-input::placeholder {
-    color: #9ca3af;
+    /* Estilo para el placeholder de los campos de entrada */
+    color: #9ca3af;                /* Color gris */
 }
 
 .btn-primary {
-    width: 120px;
-    background-color: #1C1E52;
-    color: white;
-    padding: 10px 0;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-bottom: 30px;
+    /* Estilo para el botón principal (por ejemplo, para confirmar) */
+    width: 120px;                  /* Ancho fijo */
+    background-color: #1C1E52;     /* Fondo oscuro */
+    color: white;                  /* Texto blanco */
+    padding: 10px 0;               /* Relleno vertical */
+    border: none;                  /* Sin borde */
+    border-radius: 50px;           /* Bordes redondeados */
+    cursor: pointer;               /* Cambia el cursor a mano */
+    margin-bottom: 30px;           /* Espaciado inferior */
     font-weight: 500;
     font-size: 0.9rem;
 }
 
 .btn-primary:hover {
-    background-color: #2e2783;
+    /* Efecto al pasar el cursor sobre el botón */
+    background-color: #2e2783;     /* Color de fondo más oscuro */
 }
 
 .password-title {
+    /* Título para la sección de contraseña */
     font-size: 1.1rem;
     font-weight: 600;
     margin-top: 15px;
@@ -184,25 +204,28 @@
 }
 
 .password-subtitle {
+    /* Subtítulo para la sección de contraseña */
     font-size: 0.875rem;
     margin-bottom: 16px;
     color: #6b7280;
 }
 
 .photo-upload-section {
+    /* Sección para subir la foto de perfil */
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 20px;
-    gap: 15px;
+    flex-direction: row;           /* Los elementos están en fila */
+    align-items: center;           /* Centra los elementos verticalmente */
+    margin-top: 20px;              /* Espaciado superior */
+    gap: 15px;                     /* Espaciado entre elementos */
 }
 
 .photo-preview {
+    /* Estilo para la vista previa de la foto de perfil */
     width: 120px;
     height: 120px;
     background-color: white;
     border: 1px solid #d1d5db;
-    border-radius: 50%;
+    border-radius: 50%;           /* Imagen circular */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,29 +233,76 @@
 }
 
 .photo-buttons {
+    /* Contenedor de botones de subir imagen */
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 12px;                    /* Espaciado entre botones */
 }
 
 .photo-upload-section button {
+    /* Estilo de los botones dentro de la sección de foto */
     width: 160px;
-    text-align: center;
-    margin-bottom: 0;
+    text-align: center;           /* Centra el texto */
+    margin-bottom: 0;             /* Sin espaciado inferior */
 }
 
 .photo-btn {
-    margin-bottom: 0;
+    margin-bottom: 0;             /* Sin espaciado inferior */
 }
 
 input[name="confirmarContrasena"]::placeholder {
-    color: #9ca3af;
-    font-size: 0.9rem;
+    /* Estilo para el placeholder del campo de confirmación de contraseña */
+    color: #9ca3af;                /* Color gris claro */
+    font-size: 0.9rem;             /* Tamaño de fuente pequeño */
 }
-.config-container{
 
+/* Estilo general de la página de configuración */
+.config-container {
     display: flex;
-    height: 120vh;
-    background: linear-gradient(to  bottom left, #fff 50%, #59A8D6 100%);
-    font-family: 'Poppins', Arial, sans-serif;
+    height: 120vh;                /* Altura de la página de configuración */
+    background: linear-gradient(to bottom left, #fff 50%, #59A8D6 100%); /* Gradiente de fondo */
+    font-family: 'Poppins', Arial, sans-serif;  /* Fuente moderna */
+}
+
+@media (max-width: 480px) {
+    /* En pantallas muy pequeñas, ajusta el diseño */
+    .config-container {
+        height: auto;               /* La altura ya no es fija */
+        padding: 10px;              /* Menos relleno */
+    }
+
+    .config-wrapper {
+        flex-direction: column;    /* Los elementos se apilan en columna */
+    }
+
+    .user-info-panel,
+    .form-panel {
+        width: 100%;               /* Ocupa todo el ancho */
+    }
+
+    .user-avatar {
+        width: 60px;               /* Avatar más pequeño */
+        height: 60px;
+    }
+
+    .avatar-svg {
+        width: 36px;               /* SVG más pequeño */
+        height: 36px;
+    }
+
+    .panel-title,
+    .password-title {
+        font-size: 1rem;           /* Títulos más pequeños */
+    }
+
+    .form-label,
+    .info-label,
+    .form-input {
+        font-size: 0.875rem;       /* Tamaño de fuente reducido */
+    }
+
+    .btn-primary {
+        width: 100%;               /* Botón ocupa todo el ancho */
+        font-size: 0.875rem;       /* Tamaño de fuente reducido */
+    }
 }
