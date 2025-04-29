@@ -1,6 +1,8 @@
-/* Terminos.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* se importa la fuente "Poppins" desde Google Fonts para que sea utilizada en todo el archivo. */
+
+/* contenedor principal */
 .terminos-container {
   min-height: 100vh;
   background: linear-gradient(to bottom left, #EEEEEE 30%, #59A8D6 100%);
@@ -10,6 +12,7 @@
   justify-content: center;
 }
 
+/* contenedor de contenido */
 .terminos-content {
   background-color: white;
   border-radius: 12px;
@@ -20,6 +23,7 @@
   margin: 0 auto;
 }
 
+/* estilo de la cabecera */
 .header {
   display: flex;
   flex-direction: column;
@@ -28,11 +32,14 @@
   text-align: center;
 }
 
+/* logo */
 .logo {
   width: 120px;
   margin-bottom: 20px;
 }
+/* el logo tiene un ancho de 120px y un espaciado debajo para separarlo de otros elementos. */
 
+/* título */
 .title {
   font-size: 28px;
   font-weight: 700;
@@ -40,20 +47,26 @@
   margin-bottom: 10px;
 }
 
+/* fecha de actualización */
 .update-date {
   font-size: 14px;
   color: #666;
   margin-bottom: 20px;
 }
 
+/* sección de términos */
 .terms-sections {
   margin-bottom: 40px;
 }
 
+
+/* sección individual de términos */
 .term-section {
   margin-bottom: 24px;
 }
 
+
+/* títulos de las secciones */
 .section-title {
   font-size: 18px;
   font-weight: 600;
@@ -61,6 +74,7 @@
   margin-bottom: 10px;
 }
 
+/* párrafos dentro de las secciones */
 .term-section p {
   font-size: 15px;
   line-height: 1.6;
@@ -68,6 +82,7 @@
   margin-bottom: 12px;
 }
 
+/* listas dentro de las secciones */
 .terms-list {
   list-style-type: disc;
   padding-left: 24px;
@@ -75,6 +90,7 @@
   margin-bottom: 16px;
 }
 
+/* ítems de lista */
 .terms-list li {
   margin-bottom: 8px;
   font-size: 15px;
@@ -82,17 +98,23 @@
   color: #333;
 }
 
+
+/* enlaces */
 .link {
   color: #1a73e8;
   text-decoration: none;
   transition: color 0.2s;
 }
 
+
+/* efecto hover en los enlaces */
 .link:hover {
   text-decoration: underline;
   color: #0d47a1;
 }
+/* los enlaces muestran un subrayado y cambian de color a un tono más oscuro al pasar el ratón sobre ellos. */
 
+/* pie de página */
 .footer {
   text-align: center;
   font-size: 14px;
@@ -102,35 +124,37 @@
   margin-top: 30px;
 }
 
-/* Responsive adjustments */
+/* estilos para pantallas pequeñas (menor a 768px) */
 @media screen and (max-width: 768px) {
   .terminos-content {
     padding: 25px;
   }
-  
+
   .title {
     font-size: 24px;
   }
-  
+
   .section-title {
     font-size: 16px;
   }
 }
 
+/* estilos para pantallas muy pequeñas (menor a 480px) */
 @media screen and (max-width: 480px) {
   .terminos-container {
     padding: 20px 15px;
   }
-  
+
   .terminos-content {
     padding: 20px 15px;
   }
-  
+
   .logo {
     width: 100px;
   }
-  
+
   .title {
     font-size: 22px;
   }
 }
+/* para pantallas de teléfonos móviles, se ajusta el tamaño del logo, el título y el espaciado interno para asegurar una visualización adecuada. */

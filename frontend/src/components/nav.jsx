@@ -40,20 +40,12 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/configuration" className="fw-bold">
               Perfil
             </Nav.Link>
-            <Nav.Link as={Link} to="/Terminos" className="fw-bold">
-              terminos
-            </Nav.Link>
+          
 
             {/* Carrito de compras */}
             <Nav.Link as={Link} to="/cart" className="fw-bold position-relative">
               <FaShoppingCart size={22} />
-              <Badge
-                bg="danger"
-                pill
-                className="position-absolute top-0 start-100 translate-middle"
-              >
-                1
-              </Badge>
+           
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
