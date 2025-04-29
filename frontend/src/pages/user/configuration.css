@@ -1,308 +1,562 @@
-/* Estilo de perfil/configuración */
+/*VARIABLES GLOBALES Y CONFIGURACIÓN*/
+:root {
+    /* Colores principales */
+    --primary-color: #1C1E52;
+    /* Azul oscuro para botones primarios */
+    --primary-hover: #2e2783;
+    /* Color hover para botones primarios */
+
+    /* Colores de fondo */
+    --bg-color: #f9fafb;
+    /* Fondo general de la página */
+    --card-bg: white;
+    /* Fondo de tarjetas/paneles */
+    --input-bg: #f3f4f6;
+    /* Fondo de inputs */
+
+    /* Colores de texto */
+    --text-primary: #333333;
+    /* Texto principal */
+    --text-secondary: #6b7280;
+    /* Texto secundario, subtítulos */
+    --placeholder: #9ca3af;
+    /* Texto placeholder en inputs */
+
+    /* Bordes y sombras */
+    --border-color: #e5e7eb;
+    /* Color de bordes */
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para paneles */
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    /* Bordes para paneles e inputs */
+    --border-radius-lg: 50px;
+    /* Bordes para botones */
+
+    /* Gradiente de fondo */
+    --gradient-bg: linear-gradient(to bottom left, #fff 50%, #59A8D6 100%);
+
+    /* Tipografía */
+    --font-family: 'Poppins', Arial, sans-serif;
+}
+
+/*Estilos bases*/
+* {
+    box-sizing: border-box;
+    /* Incluye padding y border en width/height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-primary);
+    line-height: 1.5;
+    /* Mejor legibilidad de texto */
+}
+
+/* Layout principal */
+/* Contenedor principal - ocupa todo el viewport */
 .config-container {
-    /* Establece el contenedor principal como un flexbox centrado tanto vertical como horizontalmente */
     display: flex;
-    justify-content: center;  /* Centra horizontalmente */
-    align-items: center;      /* Centra verticalmente */
-    min-height: 100vh;         /* Mínima altura del contenedor para llenar la pantalla */
-    background-color: #f9fafb; /* Color de fondo suave */
-    padding: 20px;             /* Espaciado interno */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    min-height: 100vh;
+    /* Mínimo el alto de la pantalla */
+    background: var(--gradient-bg);
+    padding: 20px;
+    /* Espaciado en todos los lados */
+    transition: padding 0.3s ease;
+    /* Transición suave del padding */
 }
 
+/* Wrapper para los paneles de información y formulario */
 .config-wrapper {
-    /* Wrapper que contiene los elementos de configuración */
-    width: 100%;                 /* Ocupa todo el ancho disponible */
-    max-width: 1024px;           /* Ancho máximo */
-    display: flex;               /* Usa Flexbox para alinear los elementos */
-    flex-direction: row;         /* Por defecto, los elementos se colocan en fila */
-    gap: 20px;                   /* Espacio entre los elementos */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    max-width: 1200px;
+    /* Limita el ancho máximo */
+    display: flex;
+    /* Usa flexbox para los paneles */
+    gap: 24px;
+    /* Espacio entre paneles */
+    transition: flex-direction 0.3s ease;
+    /* Transición suave */
 }
 
-@media (max-width: 1024px) {
-    /* En pantallas con ancho de 1024px o menos, cambia la dirección de los elementos a columna */
-    .config-wrapper {
-        flex-direction: column;
-    }
+/* Paneles*/
+.user-info-panel,
+.form-panel {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow);
+    /* Sombra sutil */
+    transition: all 0.3s ease;
+    /* Transición suave */
 }
 
-/* Left side - Panel de información de usuario */
+/* Panel de información (izquierza) */
 .user-info-panel {
-    /* Panel que contiene la información del usuario */
-    width: 33%;                 /* Ocupa un tercio del ancho */
-    background-color: white;    /* Fondo blanco */
-    padding: 24px;              /* Espaciado interno */
-    border-radius: 8px;         /* Bordes redondeados */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    flex: 1;
+    /* Toma el espacio proporcional */
+    padding: 24px;
+    /* Espaciado interno */
+    max-width: 350px;
+    /* Ancho máximo */
 }
 
-@media (max-width: 768px) {
-    /* En pantallas de 768px o menos, el panel de usuario ocupa el 100% del ancho */
-    .user-info-panel {
-        width: 100%;
-    }
-}
-
+/* Contenedor para avatar y nombre de usuario */
 .user-avatar-container {
-    /* Contenedor para la foto de usuario */
     display: flex;
     flex-direction: column;
-    align-items: center;       /* Centra la imagen */
-    margin-bottom: 24px;       /* Espaciado inferior */
+    align-items: center;
+    /* Centra horizontalmente */
+    margin-bottom: 24px;
+    /* Espacio abajo */
 }
 
+/* Avatar del usuario */
 .user-avatar {
-    /* Estilo para el avatar (foto de usuario) */
     width: 80px;
     height: 80px;
-    background-color: #f3f4f6; /* Fondo gris claro */
-    border-radius: 50%;         /* Forma circular */
-    display: flex;
-    align-items: center;       /* Centra el contenido dentro */
-    justify-content: center;   /* Centra el contenido dentro */
-    border: 1px solid #e5e7eb; /* Borde gris claro */
-}
-
-.avatar-svg {
-    /* Tamaño del SVG que representa el avatar */
-    width: 48px;
-    height: 48px;
-}
-
-.user-info-header {
-    margin-top: 8px;           /* Espaciado superior */
-    text-align: center;        /* Centra el texto */
-}
-
-.username {
-    font-weight: 500;          /* Peso de la fuente para el nombre */
-}
-
-.user-id {
-    font-size: 0.875rem;       /* Tamaño pequeño */
-    color: #6b7280;            /* Color gris */
-}
-
-.user-details {
-    /* Estilo para los detalles del usuario debajo del nombre */
-    border-top: 1px solid #e5e7eb; /* Línea separadora */
-    padding-top: 16px;          /* Espaciado superior */
-}
-
-.section-title {
-    /* Estilo para los títulos de sección */
-    font-size: 0.875rem;
-    font-weight: 500;
-    margin-bottom: 12px;
-}
-
-.info-row {
-    margin-bottom: 8px;         /* Espaciado inferior */
-}
-
-.info-label {
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.info-value {
-    font-size: 0.875rem;        /* Tamaño de la fuente para los valores */
-}
-
-/* Panel de formulario */
-.form-panel {
-    width: 67%;                 /* Ocupa los dos tercios restantes */
-    background-color: white;    /* Fondo blanco */
-    padding: 24px;              /* Espaciado interno */
-    border-radius: 8px;         /* Bordes redondeados */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-}
-
-@media (max-width: 768px) {
-    /* En pantallas más pequeñas, el panel de formulario ocupa el 100% del ancho */
-    .form-panel {
-        width: 100%;
-    }
-}
-
-.panel-title {
-    /* Estilo para el título principal del formulario */
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.form-row {
-    /* Estilo para la disposición de los campos del formulario en dos columnas */
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-    gap: 16px;                      /* Espacio entre las columnas */
-    margin-bottom: 20px;
-}
-
-@media (max-width: 640px) {
-    /* En pantallas más pequeñas, se cambia a una sola columna */
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-}
-
-.form-group {
-    margin-bottom: 12px;           /* Espaciado inferior de cada grupo de formulario */
-}
-
-.form-label {
-    /* Estilo para las etiquetas de los campos de formulario */
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 6px;
-    color: #333;
-}
-
-.form-input {
-    /* Estilo para los campos de entrada del formulario */
-    width: 100%;                   /* Ancho completo */
-    padding: 10px 12px;            /* Relleno interno */
-    border: 1px solid #e5e7eb;     /* Borde gris claro */
-    border-radius: 8px;            /* Bordes redondeados */
-    background-color: #f3f4f6;     /* Fondo gris claro */
-    font-size: 0.9rem;
-}
-
-.form-input::placeholder {
-    /* Estilo para el placeholder de los campos de entrada */
-    color: #9ca3af;                /* Color gris */
-}
-
-.btn-primary {
-    /* Estilo para el botón principal (por ejemplo, para confirmar) */
-    width: 120px;                  /* Ancho fijo */
-    background-color: #1C1E52;     /* Fondo oscuro */
-    color: white;                  /* Texto blanco */
-    padding: 10px 0;               /* Relleno vertical */
-    border: none;                  /* Sin borde */
-    border-radius: 50px;           /* Bordes redondeados */
-    cursor: pointer;               /* Cambia el cursor a mano */
-    margin-bottom: 30px;           /* Espaciado inferior */
-    font-weight: 500;
-    font-size: 0.9rem;
-}
-
-.btn-primary:hover {
-    /* Efecto al pasar el cursor sobre el botón */
-    background-color: #2e2783;     /* Color de fondo más oscuro */
-}
-
-.password-title {
-    /* Título para la sección de contraseña */
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-top: 15px;
-    margin-bottom: 6px;
-    color: #333;
-}
-
-.password-subtitle {
-    /* Subtítulo para la sección de contraseña */
-    font-size: 0.875rem;
-    margin-bottom: 16px;
-    color: #6b7280;
-}
-
-.photo-upload-section {
-    /* Sección para subir la foto de perfil */
-    display: flex;
-    flex-direction: row;           /* Los elementos están en fila */
-    align-items: center;           /* Centra los elementos verticalmente */
-    margin-top: 20px;              /* Espaciado superior */
-    gap: 15px;                     /* Espaciado entre elementos */
-}
-
-.photo-preview {
-    /* Estilo para la vista previa de la foto de perfil */
-    width: 120px;
-    height: 120px;
-    background-color: white;
-    border: 1px solid #d1d5db;
-    border-radius: 50%;           /* Imagen circular */
+    background-color: var(--input-bg);
+    border-radius: 50%;
+    /* Forma circular */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    /* Oculta contenido fuera del círculo */
+    transition: all 0.3s ease;
+    /* Transición suave */
 }
 
+/* Icono SVG del avatar */
+.avatar-svg {
+    width: 48px;
+    height: 48px;
+    stroke: currentColor;
+    /* Usa el color actual del texto */
+    transition: all 0.3s ease;
+    /* Transición suave */
+}
+
+/* Encabezado con nombre de usuario */
+.user-info-header {
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* Nombre de usuario */
+.username {
+    font-weight: 600;
+    /* Semi-negrita */
+    margin-bottom: 2px;
+}
+
+/* ID de usuario */
+.user-id {
+    font-size: 0.875rem;
+    /* Tamaño más pequeño */
+    color: var(--text-secondary);
+    /* Color secundario */
+}
+
+/* Sección de detalles del usuario */
+.user-details {
+    border-top: 1px solid var(--border-color);
+    /* Línea separadora */
+    padding-top: 16px;
+    /* Espacio arriba */
+}
+
+/* Título de sección */
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    /* Semi-negrita */
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+/* Fila de información */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    /* Etiqueta a la izquierda, valor a la derecha */
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    /* Permite salto de línea si es necesario */
+}
+
+/* Etiqueta de información */
+.info-label {
+    font-weight: 500;
+    /* Medium */
+    font-size: 0.9rem;
+}
+
+/* Valor de información */
+.info-value {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    /* Color secundario */
+    word-break: break-word;
+    /* Evita desbordamiento de texto */
+}
+
+/* Panel del formulario (derecho)*/
+.form-panel {
+    flex: 2;
+    /* Toma el doble de espacio que el panel izquierdo */
+    padding: 32px;
+    /* Espaciado interno */
+}
+
+/* Título del panel de formulario */
+.panel-title {
+    font-size: 1.5rem;
+    /* Tamaño más grande */
+    font-weight: 700;
+    /* Negrita */
+    margin-bottom: 28px;
+    color: var(--text-primary);
+}
+
+/* Filas de formulario - 2 columnas */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas iguales */
+    gap: 20px;
+    /* Espacio entre columnas */
+    margin-bottom: 24px;
+    /* Espacio abajo */
+}
+
+/* Grupo de formulario (label + input) */
+.form-group {
+    margin-bottom: 8px;
+}
+
+/* Etiqueta del campo */
+.form-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    /* Medium */
+    margin-bottom: 8px;
+}
+
+/* Campo de entrada */
+.form-input {
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    padding: 12px 16px;
+    /* Espaciado interno */
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--input-bg);
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    /* Transición suave */
+}
+
+/* Estado focus del input */
+.form-input:focus {
+    outline: none;
+    /* Quita el borde de focus nativo */
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(28, 30, 82, 0.1);
+    /* Sombra sutil */
+}
+
+/* Placeholder del input */
+.form-input::placeholder {
+    color: var(--placeholder);
+}
+
+/* Botones */
+/* Estilos comunes para todos los botones */
+.btn-primary,
+.btn-secondary {
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius-lg);
+    /* Bordes muy redondeados */
+    font-weight: 600;
+    /* Semi-negrita */
+    font-size: 0.95rem;
+    cursor: pointer;
+    /* Cursor de mano */
+    transition: all 0.2s ease;
+    /* Transición suave */
+    text-align: center;
+}
+
+/* Botón primario */
+.btn-primary {
+    width: max-content;
+    /* Ancho según contenido */
+    min-width: 120px;
+    /* Ancho mínimo */
+    background-color: var(--primary-color);
+    color: white;
+    margin-bottom: 30px;
+    /* Espacio abajo */
+}
+
+/* Estado hover del botón primario */
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    /* Efecto de elevación */
+}
+
+/* Botón secundario */
+.btn-secondary {
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+}
+
+/* Estado hover del botón secundario */
+.btn-secondary:hover {
+    background-color: #e9ecef;
+}
+
+/* Contraseña*/
+.password-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    /* Semi-negrita */
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.password-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+}
+
+/* Foto */
+.photo-upload-section {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    gap: 24px;
+    /* Espacio entre elementos */
+    flex-wrap: wrap;
+    /* Permite salto de línea si es necesario */
+}
+
+/* Vista previa de la foto */
+.photo-preview {
+    width: 120px;
+    height: 120px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    /* Forma circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Oculta contenido fuera del círculo */
+    transition: all 0.3s ease;
+    /* Transición suave */
+}
+
+/* Contenedor de botones de foto */
 .photo-buttons {
-    /* Contenedor de botones de subir imagen */
     display: flex;
     flex-direction: column;
-    gap: 12px;                    /* Espaciado entre botones */
+    gap: 12px;
+    /* Espacio entre botones */
+    flex: 1;
+    /* Toma el espacio disponible */
+    min-width: 160px;
+    /* Ancho mínimo */
 }
 
-.photo-upload-section button {
-    /* Estilo de los botones dentro de la sección de foto */
-    width: 160px;
-    text-align: center;           /* Centra el texto */
-    margin-bottom: 0;             /* Sin espaciado inferior */
-}
+/* Responsive */
 
-.photo-btn {
-    margin-bottom: 0;             /* Sin espaciado inferior */
-}
+/* Tabletas grandes y pantallas medianas */
+@media (max-width: 1024px) {
 
-input[name="confirmarContrasena"]::placeholder {
-    /* Estilo para el placeholder del campo de confirmación de contraseña */
-    color: #9ca3af;                /* Color gris claro */
-    font-size: 0.9rem;             /* Tamaño de fuente pequeño */
-}
-
-/* Estilo general de la página de configuración */
-.config-container {
-    display: flex;
-    height: 120vh;                /* Altura de la página de configuración */
-    background: linear-gradient(to bottom left, #fff 50%, #59A8D6 100%); /* Gradiente de fondo */
-    font-family: 'Poppins', Arial, sans-serif;  /* Fuente moderna */
-}
-
-@media (max-width: 480px) {
-    /* En pantallas muy pequeñas, ajusta el diseño */
-    .config-container {
-        height: auto;               /* La altura ya no es fija */
-        padding: 10px;              /* Menos relleno */
-    }
-
+    /* Cambia disposición a vertical */
     .config-wrapper {
-        flex-direction: column;    /* Los elementos se apilan en columna */
+        flex-direction: column;
+        /* Apila los elementos verticalmente */
+        align-items: center;
+        /* Centra horizontalmente */
     }
 
+    /* Panel de usuario ocupa todo el ancho */
+    .user-info-panel {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Panel de formulario ocupa todo el ancho */
+    .form-panel {
+        width: 100%;
+    }
+}
+
+/* Tabletas pequeñas y telefonos grandes */
+@media (max-width: 768px) {
+
+    /* Ajusta el espaciado del contenedor */
+    .config-container {
+        padding: 16px;
+        height: auto;
+        /* Altura automática */
+    }
+
+    /* Reduce tamaño del título */
+    .panel-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    /* Reduce el padding del panel de formulario */
+    .form-panel {
+        padding: 24px;
+    }
+
+    /* Reduce tamaño del título de contraseña */
+    .password-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* telefonos medianos */
+@media (max-width: 640px) {
+
+    /* Cambia el grid a una columna */
+    .form-row {
+        grid-template-columns: 1fr;
+        /* Una sola columna */
+        gap: 12px;
+        /* Menos espacio entre campos */
+        margin-bottom: 16px;
+        /* Menos espacio abajo */
+    }
+
+    /* Botones ocupan todo el ancho */
+    .btn-primary {
+        width: 100%;
+    }
+
+    /* Cambia sección de foto a columna */
+    .photo-upload-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Botones de foto ocupan todo el ancho */
+    .photo-buttons {
+        width: 100%;
+    }
+}
+
+/* telefonos pequeños */
+@media (max-width: 480px) {
+
+    /* Reduce más el padding del contenedor */
+    .config-container {
+        padding: 10px;
+    }
+
+    /* Reduce padding de los paneles */
     .user-info-panel,
     .form-panel {
-        width: 100%;               /* Ocupa todo el ancho */
+        padding: 16px;
     }
 
+    /* Reduce tamaño del avatar */
     .user-avatar {
-        width: 60px;               /* Avatar más pequeño */
-        height: 60px;
+        width: 64px;
+        height: 64px;
     }
 
+    /* Reduce tamaño del SVG */
     .avatar-svg {
-        width: 36px;               /* SVG más pequeño */
+        width: 36px;
         height: 36px;
     }
 
+    /* Reduce tamaño de la vista previa de foto */
+    .photo-preview {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Filas de info en columna */
+    .info-row {
+        flex-direction: column;
+        gap: 4px;
+        /* Espacio entre label y valor */
+    }
+
+    /* Reduce espaciado entre títulos */
+    .section-title,
+    .panel-title {
+        margin-bottom: 12px;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 360px) {
+
+    /* Reduce tamaño de títulos */
     .panel-title,
     .password-title {
-        font-size: 1rem;           /* Títulos más pequeños */
+        font-size: 1rem;
     }
 
+    /* Reduce padding de inputs */
+    .form-input {
+        padding: 10px 12px;
+    }
+
+    /* Reduce tamaño de texto de labels y valores */
     .form-label,
     .info-label,
-    .form-input {
-        font-size: 0.875rem;       /* Tamaño de fuente reducido */
+    .info-value {
+        font-size: 0.8rem;
     }
 
-    .btn-primary {
-        width: 100%;               /* Botón ocupa todo el ancho */
-        font-size: 0.875rem;       /* Tamaño de fuente reducido */
+    /* Reduce tamaño de botones */
+    .btn-primary,
+    .btn-secondary {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+
+    /* Reduce más el tamaño del avatar */
+    .user-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Reduce más el tamaño del SVG */
+    .avatar-svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Reduce más el tamaño de la vista previa de foto */
+    .photo-preview {
+        width: 80px;
+        height: 80px;
     }
 }
