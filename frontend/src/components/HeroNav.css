@@ -5,6 +5,12 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 /* Estilos generales */
@@ -21,7 +27,7 @@ body, html {
 
 /* Ajuste para evitar que el contenido quede oculto detrás de la navbar */
 body {
-  padding-top: 80px;
+  padding-top: 60px; /* Ajustado para ser más flexible */
 }
 
 /* Sección Hero */
@@ -30,38 +36,40 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 89vh;
-  padding: 0;
-  margin: 0;
+  min-height: 80vh; /* Cambiado a min-height para ser más flexible */
+  padding: 40px 20px; /* Añadido padding horizontal y vertical */
+  width: 100%;
 }
 
 .hero-container {
   display: flex;
-  align-items: stretch; /* ← cambio importante */
+  align-items: center; /* Centrado vertical */
   justify-content: space-between;
   max-width: 1200px;
   width: 100%;
-  height: 100%; /* ← añadido */
+  margin: 0 auto; /* Centrado horizontal */
 }
 
 /* Texto del Hero */
 .hero-text {
+  flex: 1;
   max-width: 50%;
-  display: flex; /* ← añadido */
-  flex-direction: column; /* ← añadido */
-  justify-content: center; /* ← añadido */
+  padding-right: 20px; /* Espacio entre texto e imagen */
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Tamaño de fuente responsive */
   font-weight: bold;
   color: #000;
+  margin-top: 0;
+  line-height: 1.2;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 2vw, 1.2rem); /* Tamaño de fuente responsive */
   color: #333;
   margin: 20px 0;
+  line-height: 1.5;
 }
 
 /* Botón personalizado */
@@ -73,8 +81,10 @@ body {
   border-radius: 8px;
   text-decoration: none;
   border: none;
-  min-width: 200px;
+  min-width: 150px; /* Reducido para mejor adaptación */
+  display: inline-block;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
@@ -84,37 +94,32 @@ body {
 
 /* Imagen del Hero */
 .hero-image {
-  display: flex; /* ← añadido */
-  align-items: flex-end; /* ← añadido */
-  justify-content: center; /* ← añadido */
-  flex: 1; /* ← añadido */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alineado a la derecha */
 }
 
 .hero-image img {
-  max-width: 600px;
+  max-width: 100%; /* Imagen responsive */
   height: auto;
-  margin: 0; /* ← eliminado margin-top negativo */
+  display: block;
 }
 
 /* Responsivo */
 
-/* Para pantallas grandes, como escritorios de 1200px */
+/* Para pantallas grandes (1200px o menos) */
 @media (max-width: 1200px) {
   .hero-container {
-    flex-direction: row;
-    justify-content: space-between;
+    max-width: 90%;
   }
-
+  
   .hero-text {
-    max-width: 50%;
-  }
-
-  .hero-image img {
-    max-width: 600px;
+    padding-right: 15px;
   }
 }
 
-/* Para pantallas medianas, como tablets de 992px a 1200px */
+/* Para pantallas medianas (992px o menos) */
 @media (max-width: 992px) {
   .hero-container {
     flex-direction: column;
@@ -123,68 +128,76 @@ body {
 
   .hero-text {
     max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 30px;
   }
 
   .hero-image {
-    align-items: center; /* para centrar en móviles */
-    margin-top: 20px;
+    justify-content: center; /* Centrado en dispositivos medianos */
   }
-
+  
   .hero-image img {
-    max-width: 400px;
-    margin: 0;
+    max-width: 70%; /* Ajustado para dispositivos medianos */
   }
 }
 
-/* Para pantallas pequeñas, como dispositivos móviles de 768px a 992px */
+/* Para tablets (768px o menos) */
 @media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
+  body {
+    padding-top: 50px;
   }
-
-  .hero-text {
-    max-width: 100%;
-    padding: 0 20px; /* Añadido padding a la izquierda y derecha para mejorar el espaciado */
+  
+  .hero-section {
+    padding: 30px 15px;
   }
-
-  .hero-text h1 {
-    font-size: 2rem; /* Tamaño de fuente ajustado */
+  
+  .btn-custom {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
   }
-
-  .hero-text p {
-    font-size: 1rem;
-    margin: 15px 0; /* Ajustado el margen */
-  }
-
+  
   .hero-image img {
-    max-width: 350px;
-    margin: 0;
+    max-width: 90%;
   }
 }
 
-/* Para pantallas muy pequeñas, como teléfonos móviles en orientación vertical de 480px a 768px */
-@media (max-width: 480px) {
+/* Para móviles (576px o menos) */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 8px 15px;
+  }
+  
   .hero-section {
-    height: auto; /* Ajustar la altura de la sección */
-    padding: 20px 0;
+    padding: 20px 10px;
   }
-
+  
   .hero-text h1 {
-    font-size: 1.5rem; /* Tamaño de fuente ajustado */
+    margin-bottom: 10px;
   }
-
+  
   .hero-text p {
-    font-size: 0.9rem;
-    margin: 10px 0;
+    margin: 10px 0 20px;
   }
-
-  .hero-image img {
-    max-width: 300px;
-  }
-
+  
   .btn-custom {
-    width: 100%; /* Hacer el botón de ancho completo */
-    padding: 10px 0;
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+  }
+}
+
+/* Para móviles pequeños (375px o menos) */
+@media (max-width: 375px) {
+  body {
+    padding-top: 45px;
+  }
+  
+  .hero-section {
+    padding: 15px 10px;
   }
 }
