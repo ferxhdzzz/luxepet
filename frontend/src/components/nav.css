@@ -1,71 +1,76 @@
+/* Estilos para la barra de navegación */
 .navbar {
-  background-color: transparent !important; /* Establecer fondo transparente */
-  padding: 10px 20px;
-  position: fixed; /* Fijar la barra en la parte superior */
-  top: 0;
-  left: 0;
-  width: 100%; /* Ocupar toda la pantalla */
-  z-index: 1000; /* Asegurar que esté por encima del contenido */
-  box-shadow: none; /* Remover sombra si no la quieres */
+  background-color: transparent !important; /* Fondo transparente para que se vea el contenido debajo */
+  padding: 10px 20px; /* Espaciado interno (arriba/abajo: 10px, lados: 20px) */
+  position: fixed; /* La navbar queda fija en la parte superior al hacer scroll */
+  top: 0; /* Pegada al borde superior */
+  left: 0; /* Pegada al borde izquierdo */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 1000; /* Se asegura que esté por encima de otros elementos */
+  box-shadow: none; /* Sin sombra, para un diseño más plano */
 }
 
+/* Espacio en el cuerpo para evitar que el contenido se esconda detrás de la navbar */
 body {
-  padding-top: 70px; /* Ajusta este valor si la navbar es más alta */
+  padding-top: 70px; /* Deja espacio arriba del contenido equivalente a la altura de la navbar */
 }
 
-/* Logo y nombre de la marca */
+/* Estilo del logo y nombre de la marca dentro de la navbar */
 .navbar-brand {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #2c2c2c !important;
-  display: flex;
-  align-items: center;
+  font-size: 1.8rem; /* Tamaño grande de fuente */
+  font-weight: bold; /* Texto en negrita */
+  color: #2c2c2c !important; /* Color oscuro del texto */
+  display: flex; /* Alinea elementos internos en fila */
+  align-items: center; /* Centra verticalmente el texto con el logo */
 }
 
 .navbar-brand img {
-  margin-right: 10px;
+  margin-right: 10px; /* Espacio entre el logo y el texto de marca */
 }
 
-/* Links de navegación */
+/* Estilos para los enlaces de navegación */
 .navbar-nav .nav-link {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #2c2c2c !important;
-  margin-right: 15px;
-  transition: color 0.3s ease-in-out;
+  font-size: 1rem; /* Tamaño estándar del texto */
+  font-weight: bold; /* Enlaces en negrita */
+  color: #2c2c2c !important; /* Color oscuro del texto */
+  margin-right: 15px; /* Espacio entre enlaces */
+  transition: color 0.3s ease-in-out; /* Transición suave al cambiar color */
 }
 
+/* Color al pasar el cursor sobre los enlaces */
 .navbar-nav .nav-link:hover {
-  color: #52779e !important; /* Azul más oscuro */
+  color: #52779e !important; /* Azul más oscuro al hacer hover */
 }
 
-/* Carrito de compras */
+/* Estilos específicos para el ícono del carrito de compras */
 .navbar-nav .nav-link.position-relative {
-  display: flex;
-  align-items: center;
-  color: #2c2c2c !important;
+  display: flex; /* Alineación horizontal del ícono y el contador */
+  align-items: center; /* Centrado vertical */
+  color: #2c2c2c !important; /* Color oscuro */
 }
 
+/* Estilo del badge que indica cantidad de productos en el carrito */
 .navbar-nav .nav-link .badge {
-  font-size: 0.75rem;
-  padding: 4px 6px;
+  font-size: 0.75rem; /* Tamaño pequeño */
+  padding: 4px 6px; /* Espaciado interno del badge */
 }
 
-/* Asegurar que la navbar ocupe todo el ancho en móviles */
+/* Evita que el contenedor limite el ancho en móviles */
 .container {
-  max-width: 100%;
+  max-width: 100%; /* Ocupa todo el ancho disponible */
 }
 
+/* Repetido intencionalmente: más estilos para navbar */
 .navbar {
-  height: 100px; /* Ajusta según el diseño */
-  display: flex;
-  align-items: center; /* Centra verticalmente los hijos */
-  padding-left: 1rem; /* Opcional: separa el logo del borde */
+  height: 100px; /* Altura total de la navbar */
+  display: flex; /* Alineación de elementos en fila */
+  align-items: center; /* Centrado vertical de los hijos */
+  padding-left: 1rem; /* Separación del borde izquierdo */
 }
 
-/* Estilo para el logo */
+/* Estilos para la imagen del logo */
 .nav-logo {
-  height: 100px; /* Tamaño visual del logo */
-  object-fit: contain;
-  display: block;
+  height: 100px; /* Altura del logo */
+  object-fit: contain; /* Escala la imagen sin recortarla */
+  display: block; /* Se asegura que se comporte como bloque */
 }
