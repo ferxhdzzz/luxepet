@@ -7,7 +7,7 @@ function EnviarCodigo() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    navigate('/');
+    navigate('/enviar');
   };
 
   return (
@@ -37,7 +37,7 @@ function EnviarCodigo() {
         </div>
         <br />
         <br />
-        <button className="buttonn"  onClick={handleLogin}>Enviar Código</button>
+        <button className="buttonn" onClick={handleLogin}>Enviar Código</button>
       </div>
     </div>
   );

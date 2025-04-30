@@ -31,17 +31,18 @@ function App() {
           <Route path="/products" element={<Productsycat />} />
           <Route path="/" element={<HeroNav />} />
           <Route path="/login" element={<Loginn />} />
-          
+
           {/* Rutas existentes */}
           <Route path="/" element={<Home />} />
           <Route path="/configuration" element={<Configuration />} />
           <Route path="/products" element={<Productsycat />} />
           <Route path="/contact" element={<Contactanos />} />
-          <Route path="/actualizar" element={<Actualizar />} />
+          <Route path="/actualizar" element={<Enviarcod />} />
           <Route path="/Terminos" element={<Terminos />} />
           <Route path="/cart" element={<Carrito />} />
           <Route path="/About" element={<TiendaHistoria />} />
           <Route path="/register" element={<Registro />} />
+          <Route path="/enviar" element={<Actualizar />} />
 
           {/* Nuevas rutas dinámicas para productos */}
           <Route path="/product/:productId" element={<ProductPage />} />
@@ -50,7 +51,7 @@ function App() {
           <Route path="/popular/:productId" element={<ProductPage />} />
           <Route path="/historia" element={<TiendaHistoria />} />
         </Routes>
-        
+
 
         {/* Footer que aparecerá en todas las páginas */}
         <Footer />

@@ -8,7 +8,7 @@ function ActualizarContra() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    navigate('/enviar');
+    navigate('/login');
   };
 
   return (
@@ -38,7 +38,7 @@ function ActualizarContra() {
         </div>
         <br />
         <br />
-        <button className="buttonn"  onClick={handleLogin}>Actualizar</button>
+        <button className="buttonn" onClick={handleLogin}>Actualizar</button>
       </div>
     </div>
   );
