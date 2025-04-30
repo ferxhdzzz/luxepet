@@ -2,64 +2,63 @@
 
 /* Reset de márgenes y paddings generales */
 body, html {
-  margin: 0; /* Elimina márgenes por defecto */
-  padding: 0; /* Elimina relleno por defecto */
-  overflow-x: hidden; /* Evita scroll horizontal */
-  font-family: Arial, sans-serif; /* Fuente base */
-  box-sizing: border-box; /* Incluye padding y border dentro del ancho/alto total */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit; /* Asegura que todos los elementos hereden el box-sizing */
+  box-sizing: inherit;
 }
 
-/* Barra de navegación */
+/* Estilos generales */
 .navbar {
-  background-color: #a6d3f2 !important; /* Color de fondo con !important para sobrescribir */
-  padding: 10px 20px; /* Espaciado interno */
-  width: 100%; /* Ocupa todo el ancho */
-  position: fixed; /* Fijada al tope de la ventana */
+  background-color: #a6d3f2 !important;
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* Se mantiene por encima de otros elementos */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo */
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Evita que el contenido quede oculto tras la navbar */
+/* Ajuste para evitar que el contenido quede oculto detrás de la navbar */
 body {
-  padding-top: 60px; /* Espacio equivalente a la altura de la navbar */
+  padding-top: 60px; /* Ajustado para ser más flexible */
 }
 
-/* Sección principal (hero) */
+/* Sección Hero */
 .hero-section {
-  background-color: #a6d3f2; /* Mismo color que navbar */
-  display: flex; /* Layout en línea */
-  align-items: center; /* Centrado vertical */
-  justify-content: center; /* Centrado horizontal */
-  min-height: 80vh; /* Altura mínima de 80% de la pantalla */
-  padding: 40px 20px; /* Espaciado interno */
+  background-color: #a6d3f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; /* Cambiado a min-height para ser más flexible */
+  padding: 40px 20px; /* Añadido padding horizontal y vertical */
   width: 100%;
 }
 
-/* Contenedor interno del hero */
 .hero-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between; /* Espacio entre texto e imagen */
+  align-items: center; /* Centrado vertical */
+  justify-content: space-between;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto; /* Centrado horizontal */
 }
 
-/* Texto del hero */
+/* Texto del Hero */
 .hero-text {
-  flex: 1; /* Toma el mismo espacio que la imagen */
-  max-width: 50%; /* Ocupa la mitad del ancho */
+  flex: 1;
+  max-width: 50%;
   padding-right: 20px; /* Espacio entre texto e imagen */
 }
 
 .hero-text h1 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Tamaño adaptable */
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Tamaño de fuente responsive */
   font-weight: bold;
   color: #000;
   margin-top: 0;
@@ -67,7 +66,7 @@ body {
 }
 
 .hero-text p {
-  font-size: clamp(0.9rem, 2vw, 1.2rem); /* También adaptable */
+  font-size: clamp(0.9rem, 2vw, 1.2rem); /* Tamaño de fuente responsive */
   color: #333;
   margin: 20px 0;
   line-height: 1.5;
@@ -75,129 +74,129 @@ body {
 
 /* Botón personalizado */
 .btn-custom {
-  background-color: #033a2b; /* Verde oscuro */
+  background-color: #033a2b;
   color: white;
   padding: 12px 20px;
   font-size: 1rem;
   border-radius: 8px;
   text-decoration: none;
   border: none;
-  min-width: 150px;
+  min-width: 150px; /* Reducido para mejor adaptación */
   display: inline-block;
   text-align: center;
   transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
-  background-color: #02261e; /* Color más oscuro al pasar el mouse */
+  background-color: #02261e;
   color: white;
 }
 
-/* Imagen del hero */
+/* Imagen del Hero */
 .hero-image {
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Alineada a la derecha */
+  justify-content: flex-end; /* Alineado a la derecha */
 }
 
 .hero-image img {
-  max-width: 100%; /* Imagen escala sin desbordar */
+  max-width: 100%; /* Imagen responsive */
   height: auto;
   display: block;
 }
 
-/* Media Queries: Responsivo */
+/* Responsivo */
 
-/* Dispositivos menores o iguales a 1200px */
+/* Para pantallas grandes (1200px o menos) */
 @media (max-width: 1200px) {
   .hero-container {
-    max-width: 90%; /* Reduce el ancho del contenedor */
+    max-width: 90%;
   }
-
+  
   .hero-text {
-    padding-right: 15px; /* Reduce el espacio entre texto e imagen */
+    padding-right: 15px;
   }
 }
 
-/* Menores o iguales a 992px (tablets) */
+/* Para pantallas medianas (992px o menos) */
 @media (max-width: 992px) {
   .hero-container {
-    flex-direction: column; /* Apila texto e imagen */
+    flex-direction: column;
     text-align: center;
   }
 
   .hero-text {
-    max-width: 100%; /* Ocupa todo el ancho */
+    max-width: 100%;
     padding-right: 0;
-    margin-bottom: 30px; /* Espacio debajo del texto */
+    margin-bottom: 30px;
   }
 
   .hero-image {
-    justify-content: center; /* Imagen centrada */
+    justify-content: center; /* Centrado en dispositivos medianos */
   }
-
+  
   .hero-image img {
-    max-width: 70%; /* Imagen más pequeña */
+    max-width: 70%; /* Ajustado para dispositivos medianos */
   }
 }
 
-/* Menores o iguales a 768px */
+/* Para tablets (768px o menos) */
 @media (max-width: 768px) {
   body {
-    padding-top: 50px; /* Menor altura de navbar */
+    padding-top: 50px;
   }
-
+  
   .hero-section {
     padding: 30px 15px;
   }
-
+  
   .btn-custom {
     display: block;
     margin: 0 auto;
     max-width: 80%;
   }
-
+  
   .hero-image img {
     max-width: 90%;
   }
 }
 
-/* Menores o iguales a 576px (móviles) */
+/* Para móviles (576px o menos) */
 @media (max-width: 576px) {
   .navbar {
     padding: 8px 15px;
   }
-
+  
   .hero-section {
     padding: 20px 10px;
   }
-
+  
   .hero-text h1 {
     margin-bottom: 10px;
   }
-
+  
   .hero-text p {
     margin: 10px 0 20px;
   }
-
+  
   .btn-custom {
     padding: 10px 15px;
     width: 100%;
     max-width: 100%;
   }
-
+  
   .hero-image img {
     max-width: 100%;
   }
 }
 
-/* Para móviles muy pequeños (ej. iPhone SE, Galaxy Mini) */
+/* Para móviles pequeños (375px o menos) */
 @media (max-width: 375px) {
   body {
     padding-top: 45px;
   }
-
+  
   .hero-section {
     padding: 15px 10px;
   }

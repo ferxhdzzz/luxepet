@@ -1,17 +1,16 @@
-import React, { useState } from 'react'; // * React y useState para manejar el estado local
-import { Link } from 'react-router-dom'; // * Link para navegación sin recarga de página
-import './Categoria.css'; // * Importa los estilos para este componente
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Categoria.css';
 
-// * Componente para mostrar una categoría con imagen y número de productos
 const CategoriaCard = ({ imagen, titulo, productos }) => {
-  const [hovered, setHovered] = useState(false); // * Estado para detectar si el mouse está encima
+  const [hovered, setHovered] = useState(false);
 
   return (
     <div
-      className={`card ${hovered ? 'card-hover' : ''}`} // * Aplica clase adicional si está en hover
+      className={`card ${hovered ? 'card-hover' : ''}`}
       style={{ width: '150px' }}
-      onMouseEnter={() => setHovered(true)} // * Cuando el mouse entra
-      onMouseLeave={() => setHovered(false)} // * Cuando el mouse sale
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       <img src={imagen} alt={titulo} className="card-image" />
       <h3 className="text-sm">{titulo}</h3>
@@ -20,7 +19,6 @@ const CategoriaCard = ({ imagen, titulo, productos }) => {
   );
 };
 
-// * Componente para mostrar una tarjeta de lanzamiento de producto
 const LanzamientoCard = ({ imagen, titulo, precio }) => (
   <div className="card" style={{ width: '160px' }}>
     <img src={imagen} alt={titulo} className="card-image" />
@@ -29,10 +27,9 @@ const LanzamientoCard = ({ imagen, titulo, precio }) => (
   </div>
 );
 
-// * Componente para mostrar producto con botón "Comprar"
 const ProductoCard = ({ imagen, titulo, precio, link }) => {
-  const [hovered, setHovered] = useState(false); // * Hover para la tarjeta
-  const [buttonHover, setButtonHover] = useState(false); // * Hover para el botón
+  const [hovered, setHovered] = useState(false);
+  const [buttonHover, setButtonHover] = useState(false);
 
   return (
     <div
@@ -44,7 +41,7 @@ const ProductoCard = ({ imagen, titulo, precio, link }) => {
       <img src={imagen} alt={titulo} className="card-image" />
       <h4 className="text-sm">{titulo}</h4>
       <p className="precio">{precio}</p>
-      {/* * Navegación con React Router en lugar de <a> */}
+      {/* Reemplazo del tag <a> por <Link> de React Router */}
       <Link to={link} className="no-decoration">
         <button
           className={`button ${buttonHover ? 'button-hover' : ''}`}
@@ -58,7 +55,6 @@ const ProductoCard = ({ imagen, titulo, precio, link }) => {
   );
 };
 
-// * Ícono de tipo de mascota con navegación
 const MascotaIcon = ({ imagen, nombre, link }) => {
   const [hovered, setHovered] = useState(false);
 
@@ -75,14 +71,12 @@ const MascotaIcon = ({ imagen, nombre, link }) => {
   );
 };
 
-// * Componente principal que muestra la sección de productos
 const Productos = ({ defaultc }) => {
   return (
     <div className="container">
       <br />
       <br />
-
-      {/* * Sección de categorías */}
+      {/* Categorías */}
       <h2 className="section-title">Productos por categorías</h2>
       <div className="scroll-x">
         <CategoriaCard imagen="https://i.pinimg.com/736x/f7/1f/05/f71f050d316461b58b1cc5f78a1b93c2.jpg" titulo="Accesorios" productos="15" />
@@ -91,7 +85,7 @@ const Productos = ({ defaultc }) => {
         <CategoriaCard imagen="https://i.pinimg.com/736x/40/1f/b9/401fb9c30711428e373b9260512a26ec.jpg" titulo="Camas" productos="6" />
       </div>
 
-      {/* * Sección de lanzamientos futuros */}
+      {/* Próximos lanzamientos */}
       <h2 className="section-title">Próximos lanzamientos</h2>
       <div className="flex">
         <LanzamientoCard imagen="https://i.pinimg.com/736x/bf/25/02/bf25023b02a26f459a50dc62e513c541.jpg" titulo="Comida premium para perros" precio="$9.90" />
@@ -99,12 +93,12 @@ const Productos = ({ defaultc }) => {
         <LanzamientoCard imagen="https://i.pinimg.com/736x/fe/14/db/fe14db8d29236e61b2fbf806dbb41768.jpg" titulo="Snacks naturales" precio="$5.50" />
       </div>
 
-      {/* * Mensaje informativo */}
+      {/* Info Alert */}
       <div className="info-alert">
         Seguridad y calidad para tus mascotas siempre!
       </div>
 
-      {/* * Sección de productos más vendidos */}
+      {/* Más comprados */}
       <h2 className="section-title">Productos más comprados</h2>
       <div className="wrap">
         <ProductoCard imagen="https://i.pinimg.com/736x/57/5f/23/575f23782b6124e9bb8b72f1b10ae1d9.jpg" titulo="Plato para perro" precio="$3.90" link="/product/plato-para-perro" />
@@ -115,7 +109,7 @@ const Productos = ({ defaultc }) => {
         <ProductoCard imagen="https://i.pinimg.com/736x/6b/54/2f/6b542f3e490e7f79dbc483841c92f0fe.jpg" titulo="Shampoo" precio="$6.50" link="/product/shampoo" />
       </div>
 
-      {/* * Sección para navegar por tipo de mascota */}
+      {/* Mascotas */}
       <h2 className="section-title">Compra según tu tipo de mascota</h2>
       <div className="space-evenly">
         <MascotaIcon imagen="https://i.pinimg.com/736x/c9/bf/5c/c9bf5c42f0e73f45f45fd4566f9745bf.jpg" nombre="Perros" link="/mascota/perros" />
@@ -129,4 +123,4 @@ const Productos = ({ defaultc }) => {
   );
 };
 
-export default Productos; // * Exporta el componente principal para su uso en otras partes de la app
+export default Productos;

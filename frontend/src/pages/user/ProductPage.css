@@ -1,200 +1,174 @@
-/* Estilos generales para todos los elementos */
 * {
-    box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño del elemento */
-    margin: 0; /* Elimina márgenes por defecto */
-    padding: 0; /* Elimina relleno por defecto */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Estilo base del cuerpo del documento */
 body {
-    font-family: Arial, sans-serif; /* Fuente general */
-    background-color: #f5f5f5; /* Color de fondo claro */
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
 }
 
-/* Contenedor principal de la tienda de mascotas */
 .pet-store-container {
-    min-height: 100vh; /* Ocupa al menos toda la altura de la pantalla */
-    background-color: #f5f5f5; /* Mismo fondo que el body */
-    padding: 20px; /* Espaciado interior */
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
 }
 
-/* Contenedor para centrar el contenido de la tienda */
 .pet-store-wrapper {
-    max-width: 1200px; /* Máximo ancho del contenido */
-    margin: 0 auto; /* Centrado horizontal */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Diseño de la tienda en columna */
 .pet-store-layout {
-    display: flex; /* Utiliza Flexbox */
-    flex-direction: column; /* Apila verticalmente */
-    gap: 20px; /* Espacio entre elementos */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* En pantallas grandes, cambia a diseño en fila */
 @media (min-width: 768px) {
     .pet-store-layout {
-        flex-direction: row; /* Disposición horizontal */
+        flex-direction: row;
     }
 }
 
-/* Barra lateral */
+/* Estilos de barra lateral */
 .sidebar {
-    width: 100%; /* Ocupa todo el ancho en móviles */
-    background-color: white; /* Fondo blanco */
-    padding: 20px; /* Relleno interno */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* En pantallas grandes, ancho fijo para la barra lateral */
 @media (min-width: 768px) {
     .sidebar {
-        width: 280px; /* Ancho fijo */
-        flex-shrink: 0; /* No se encoge */
+        width: 280px;
+        flex-shrink: 0;
     }
 }
 
-/* Sección de filtros */
 .filter-section {
-    margin-bottom: 24px; /* Espacio inferior */
+    margin-bottom: 24px;
 }
 
-/* Título de cada sección de filtro */
 .section-title {
-    font-weight: bold; /* Negrita */
-    margin-bottom: 12px; /* Separación inferior */
-    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 16px;
 }
 
-/* Cada elemento del filtro */
 .filter-item {
-    display: flex; /* Flexbox para alinear */
-    justify-content: space-between; /* Espacio entre etiqueta y cantidad */
-    align-items: center; /* Alineación vertical */
-    margin-bottom: 6px; /* Espacio inferior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
 }
 
-/* Contenedor del checkbox */
 .filter-checkbox {
-    display: flex; /* Alineación en fila */
-    align-items: center; /* Alineación vertical */
+    display: flex;
+    align-items: center;
 }
 
-/* Checkbox y espacio derecho */
 .filter-checkbox input {
-    margin-right: 8px; /* Espacio entre checkbox y texto */
+    margin-right: 8px;
 }
 
-/* Cantidad de productos en filtro */
 .filter-count {
-    color: #777; /* Color gris */
-    font-size: 14px; /* Tamaño pequeño */
+    color: #777;
+    font-size: 14px;
 }
 
-/* Barra deslizante para precios */
 .price-slider {
-    width: 100%; /* Ocupa todo el ancho */
-    height: 8px; /* Altura de la barra */
-    background-color: #e9e9e9; /* Color base */
-    border-radius: 4px; /* Bordes redondeados */
-    appearance: none; /* Elimina estilos del navegador */
-    outline: none; /* Elimina contorno */
-    margin: 10px 0; /* Margen vertical */
+    width: 100%;
+    height: 8px;
+    background-color: #e9e9e9;
+    border-radius: 4px;
+    appearance: none;
+    outline: none;
+    margin: 10px 0;
 }
 
-/* Estilo del botón de la barra de precio (Chrome, Safari) */
 .price-slider::-webkit-slider-thumb {
-    appearance: none; /* Sin estilo predeterminado */
-    width: 16px; /* Ancho del "thumb" */
-    height: 16px; /* Altura del "thumb" */
-    border-radius: 50%; /* Forma redonda */
-    background: #1a73e8; /* Color azul */
-    cursor: pointer; /* Cursor de mano */
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #1a73e8;
+    cursor: pointer;
 }
 
-/* Pie de la sección de filtro de precio */
 .price-filter-footer {
-    display: flex; /* Flexbox */
-    justify-content: space-between; /* Espaciado entre elementos */
-    align-items: center; /* Alineación vertical */
-    margin-top: 8px; /* Espacio superior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
 }
 
-/* Texto del rango de precio */
 .price-range {
     font-size: 14px;
-    color: #555; /* Gris oscuro */
+    color: #555;
 }
 
-/* Botón para aplicar filtros */
 .filter-button {
-    background-color: #333; /* Fondo oscuro */
-    color: white; /* Texto blanco */
+    background-color: #333;
+    color: white;
     font-size: 12px;
-    padding: 4px 8px; /* Relleno */
+    padding: 4px 8px;
     border: none;
     border-radius: 4px;
-    cursor: pointer; /* Cambia el cursor */
+    cursor: pointer;
 }
 
-/* Contenedor de etiquetas (tags) */
 .tags-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que bajen a otra línea */
-    gap: 8px; /* Espacio entre tags */
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-/* Botón de cada tag */
 .tag-button {
-    background-color: #f0f0f0; /* Gris claro */
+    background-color: #f0f0f0;
     border: none;
     padding: 6px 12px;
-    border-radius: 20px; /* Redondeado tipo pastilla */
+    border-radius: 20px;
     font-size: 13px;
     cursor: pointer;
 }
 
-/* Sección de productos populares */
 .popular-products {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Espacio entre productos */
+    gap: 12px;
 }
 
-/* Cada producto popular */
 .popular-product {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-/* Imagen miniatura del producto */
 .product-thumbnail {
     width: 48px;
     height: 48px;
-    background-color: #e0e0e0; /* Gris claro */
+    background-color: #e0e0e0;
     border-radius: 6px;
 }
 
-/* Contenedor de información */
 .product-info {
-    flex: 1; /* Toma todo el espacio restante */
+    flex: 1;
 }
 
-/* Nombre del producto */
 .product-name {
     font-size: 14px;
     margin-bottom: 2px;
 }
 
-/* Precio del producto */
 .product-price {
     font-size: 14px;
     font-weight: bold;
 }
 
-/* Contenedor principal del detalle de producto */
+/* Producto detallado Styles */
 .product-detail {
     flex: 1;
     background-color: white;
@@ -203,20 +177,18 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Disposición del producto */
 .product-layout {
     display: flex;
     flex-direction: column;
 }
 
-/* En pantallas grandes: fila */
 @media (min-width: 768px) {
     .product-layout {
         flex-direction: row;
     }
 }
 
-/* Para forzar que sea columna */
+/* para que la información aparezca debajo de la imagen */
 .product-layout.vertical {
     flex-direction: column !important;
 }
@@ -227,18 +199,16 @@ body {
     }
 }
 
-/* Imagen e info ocupan todo el ancho */
 .product-layout.vertical .product-image-container,
 .product-layout.vertical .product-info-container {
     width: 100%;
 }
 
-/* Clase utilitaria de ancho completo */
 .full-width {
     width: 100% !important;
 }
 
-/* Centrar imagen */
+/* Modificación para centrar la imagen */
 .product-layout.vertical .product-image-container {
     display: flex;
     justify-content: center;
@@ -246,20 +216,18 @@ body {
     padding: 20px;
 }
 
-/* Imagen del producto */
 .product-layout.vertical .product-image {
     max-width: 100%;
     max-height: 400px;
-    object-fit: contain; /* Escala sin deformar */
+    object-fit: contain;
 }
 
-/* Contenedor de info del producto */
+/*Estilos adicionales*/
 .product-layout.vertical .product-info-container {
     padding: 20px;
     border-top: 1px solid #e9e9e9;
 }
 
-/* Contenedor de imagen */
 .product-image-container {
     padding: 24px;
     display: flex;
@@ -274,14 +242,12 @@ body {
     }
 }
 
-/* Imagen del producto */
 .product-image {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Botón de favorito (corazón) */
 .favorite-button {
     position: absolute;
     top: 16px;
@@ -293,7 +259,6 @@ body {
     cursor: pointer;
 }
 
-/* Contenedor de información del producto */
 .product-info-container {
     padding: 24px;
 }
@@ -304,7 +269,6 @@ body {
     }
 }
 
-/* Encabezado del producto */
 .product-header {
     display: flex;
     justify-content: space-between;
@@ -312,13 +276,11 @@ body {
     margin-bottom: 16px;
 }
 
-/* Título del producto */
 .product-title {
     font-size: 24px;
     font-weight: bold;
 }
 
-/* Etiqueta del precio */
 .product-price-tag {
     background-color: #004d40;
     color: white;
@@ -327,48 +289,40 @@ body {
     font-weight: bold;
 }
 
-/* Sección de rating */
 .product-rating {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
 }
 
-/* Texto antes de estrellas */
 .rating-label {
     margin-right: 8px;
 }
 
-/* Contenedor de estrellas */
 .stars {
     display: flex;
     color: #ffc107;
 }
 
-/* Texto después de estrellas */
 .stars span {
     margin-left: 4px;
     color: #333;
 }
 
-/* Sección de tamaños */
 .product-size {
     margin-bottom: 16px;
 }
 
-/* Etiqueta de tamaño */
 .size-label {
     font-weight: 600;
     margin-bottom: 8px;
 }
 
-/* Botones de tamaño */
 .size-options {
     display: flex;
     gap: 8px;
 }
 
-/* Botón individual */
 .size-button {
     width: 32px;
     height: 32px;
@@ -381,31 +335,26 @@ body {
     cursor: pointer;
 }
 
-/* Tamaño seleccionado */
 .size-button.selected {
     background-color: #009688;
     color: white;
     border-color: #009688;
 }
 
-/* Descripción del producto */
 .product-description {
     margin-bottom: 32px;
 }
 
-/* Título de la descripción */
 .description-title {
     font-weight: 600;
     margin-bottom: 8px;
 }
 
-/* Texto de la descripción */
 .description-text {
     color: #666;
     line-height: 1.5;
 }
 
-/* Botón de añadir al carrito */
 .add-to-cart-button {
     width: 50%;
     max-width: 200px;
@@ -422,12 +371,11 @@ body {
     text-align: center;
 }
 
-/* Efecto hover en botón */
 .add-to-cart-button:hover {
     background-color: #1C1E52;
 }
 
-/* Contenedor de agradecimiento */
+/*Styles */
 .thank-you-container {
     display: flex;
     align-items: center;
@@ -436,7 +384,6 @@ body {
     background-color: #f5f5f5;
 }
 
-/* Tarjeta de agradecimiento */
 .thank-you-card {
     background-color: white;
     padding: 32px;
@@ -446,20 +393,17 @@ body {
     max-width: 400px;
 }
 
-/* Título de la tarjeta */
 .thank-you-card h1 {
     color: #009688;
     margin-bottom: 16px;
     font-size: 24px;
 }
 
-/* Texto del mensaje */
 .thank-you-card p {
     color: #555;
     margin-bottom: 24px;
 }
 
-/* Botón para volver */
 .back-to-store-btn {
     background-color: #009688;
     color: white;
@@ -470,7 +414,6 @@ body {
     font-size: 16px;
 }
 
-/* Hover para botón volver */
 .back-to-store-btn:hover {
     background-color: #00796b;
 }
