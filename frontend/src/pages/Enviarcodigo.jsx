@@ -7,7 +7,9 @@ function EnviarCodigo() {
 
   // Función que se ejecuta cuando se hace clic en el botón para enviar el código
   const handleLogin = () => {
-    navigate('/'); // Navega a la página principal
+
+    navigate('/enviar');
+
   };
 
   return (
@@ -40,8 +42,10 @@ function EnviarCodigo() {
         <br />
         <br />
 
-        {/* Botón para enviar el código */}
-        <button className="buttonn" onClick={handleLogin}>Enviar Código</button> {/* Al hacer clic, navega a la página principal */}
+
+ 
+        <button className="buttonn" onClick={handleLogin}>Enviar Código</button>
+
       </div>
     </div>
   );

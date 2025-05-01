@@ -10,7 +10,9 @@ function ActualizarContra() {
 
   // Función que se ejecuta al hacer clic en el botón para redirigir al usuario
   const handleLogin = () => {
-    navigate('/enviar'); // Redirige a la ruta '/enviar'
+
+    navigate('/login');
+  
   };
 
   return (
@@ -43,7 +45,10 @@ function ActualizarContra() {
         <br />
         <br />
 
+
         {/* Botón que actualiza y redirige */}
+
+
         <button className="buttonn" onClick={handleLogin}>Actualizar</button>
       </div>
     </div>
