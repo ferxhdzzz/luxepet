@@ -49,7 +49,8 @@ git clone https://github.com/ferxhdzzz/luxepet.git
 ```bash
 cd frontend
 npm install
-npm run dev  
+npm run dev
+npx vite
 ```
 
 
